@@ -10,20 +10,18 @@ sys.path.insert(0,str(ROOT/'tools'))
 from preview_catalog import runtime
 from catalog_policy import exclusion_reason
 
-if not (ROOT/'assets/installed.lua').exists():
-    raise SystemExit('Run python tools/setup_assets.py before the asset integration checks')
 lua=runtime();mod=lua.globals().DashboardMod
 captured=ROOT/'catalog/vehicles.json'
 rows=json.loads(captured.read_text()) if captured.exists() else []
 if rows:assert all(not r['unresolvedBindings'] for r in rows)
 source_by_id={r['id']:r for r in rows}
 excluded=[{'id':id,'profile':'profiles/'+id+'.lua'} for id in json.loads((ROOT/'catalog/exclusions.json').read_text())]
-profile_count=sum(1 for _ in mod.installedVehicleIds.items())
+profile_count=len(list((ROOT/'profiles').glob('*.lua')))
 assert len(mod.profiles)==profile_count
 assert len(excluded)==15
 by_id={p.id:p for _,p in mod.profiles.items()}
 enabled=[{'id':id} for id in by_id]
-assert {id for id,_ in mod.installedVehicleIds.items()}==set(by_id)
+assert {p.stem for p in (ROOT/'profiles').glob('*.lua')}==set(by_id)
 lua.globals().expectedProfileCount=profile_count
 for row in excluded:
     assert row['id'] not in by_id
@@ -46,14 +44,10 @@ end
 assert(m.findProfile({components={car={root='Ford_Mustang_GT3_2023_extra.i3d'}}})==nil)
 local a={components={car={root='Ford_Mustang_V8Supercar_2024.i3d'},
  AIComp={xmlFilename='data/vehicles/Ford_Mustang_GT4_2024/data/car_actor.xml'}}}
-if m.installedVehicleIds.Ford_Mustang_GT4_2024 then
- assert(m.findProfile(a).id=='Ford_Mustang_GT4_2024','Exact actor ID must take precedence')
-else assert(m.findProfile(a)==nil) end
+assert(m.findProfile(a).id=='Ford_Mustang_GT4_2024','Exact actor ID must take precedence')
 a.components.AIComp=nil
 a.components.AudioComp={actorXmlFileName='dlcs/s1_dlc3/vehicles/Ford_Mustang_V8Supercar_2024/data/car_actor.xml'}
-if m.installedVehicleIds.Ford_Mustang_V8Supercar_2024 then
- assert(m.findProfile(a).id=='Ford_Mustang_V8Supercar_2024')
-else assert(m.findProfile(a)==nil) end
+assert(m.findProfile(a).id=='Ford_Mustang_V8Supercar_2024')
 ''')
 
 gauge_count=0
@@ -89,15 +83,13 @@ for _,p in ipairs(DashboardMod.profiles) do preview(p) end
 local m=DashboardMod
 g_racingManager={playerVehicleData={vehicleActor=actor,bestValidLapTime={invalid=true,timeSeconds=0}}}
 actor.components={car={root='Ford_Mustang_GT3.i3d'}}
-if m.installedVehicleIds.Ford_Mustang_GT3_2023 then
 m.refresh(16)
 assert(m.profile.id=='Ford_Mustang_GT3_2023')
 for _,f in ipairs(m.profile.fields) do
  if f.param=='lapDelta' then assert(m.values[f.id]==nil) end
 end
-end
 for _,entry in ipairs(m.catalog) do
- if m.installedVehicleIds[entry.id] then source(rootPath..entry.file) end
+ source(rootPath..entry.file)
 end
 assert(#m.profiles==expectedProfileCount,'Reload duplicated catalogue entries')
 -- Old synthetic profiles must not survive a script reload or re-registration.

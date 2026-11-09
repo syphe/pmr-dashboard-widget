@@ -1,7 +1,7 @@
 -- Run once in PMR's connected Debug Console while in the DLC Mustang.
 -- Reads two named textures through the normal mounted resource API.
 local root=DashboardMod and DashboardMod.root
-if not root then print('MUSTANG_EXPORT load local_bootstrap.lua first');return end
+if not root then print('MUSTANG_EXPORT load script.lua first');return end
 local data=g_racingManager and g_racingManager.playerVehicleData
 local actor=data and data.vehicleActor
 local car=actor and actor.components and actor.components.car

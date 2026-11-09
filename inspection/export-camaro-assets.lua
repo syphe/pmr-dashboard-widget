@@ -1,7 +1,7 @@
 -- Run through PMR's connected Debug Console while driving the owned DLC Camaro.
 -- Copy only its two named main-page textures using the mounted resource API.
 local root=DashboardMod and DashboardMod.root
-if not root then print('CAMARO_EXPORT load local_bootstrap.lua first');return end
+if not root then print('CAMARO_EXPORT load script.lua first');return end
 local data=g_racingManager and g_racingManager.playerVehicleData
 local actor=data and data.vehicleActor
 local car=actor and actor.components and actor.components.car

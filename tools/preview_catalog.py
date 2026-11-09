@@ -13,25 +13,16 @@ from lupa import LuaRuntime
 
 
 def runtime():
-    if not (ROOT/'assets/installed.lua').exists():
-        raise SystemExit('Run python tools/setup_assets.py before generating previews')
     lua=LuaRuntime(unpack_returned_tuples=True)
     lua.globals().ROOT=str(ROOT).replace('\\','/')+'/'
     lua.execute('''
 unpack=table.unpack
 DashboardMod={root=ROOT}
-function source(path) local f=assert(io.open(path));local s=f:read('*a');f:close();assert(load(s,path))() end
-source(ROOT..'profile_registry.lua')
-source(ROOT..'catalog/vehicles.lua')
-source(ROOT..'assets/installed.lua')
-for _,file in ipairs(DashboardMod.installedAssetSources) do source(ROOT..file) end
-for _,id in ipairs({'Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024','Chevrolet_Camaro_V8Supercar_2024'}) do
- if DashboardMod.installedVehicleIds[id] then source(ROOT..'profiles/'..id..'.lua') end
+function source(path)
+ if path=='dataS/s4sGame/scripts/main.lua' then return end
+ local f=assert(io.open(path));local s=f:read('*a');f:close();assert(load(s,'@'..path))()
 end
-for _,entry in ipairs(DashboardMod.catalog) do
- if DashboardMod.installedVehicleIds[entry.id] then source(ROOT..entry.file) end
-end
-source(ROOT..'dashboard_widget.lua')
+source(ROOT..'script.lua')
 Overlay={}
 function Overlay.new(filename,x,y,w,h)
  local o={filename=filename,uv={0,0,0,1,1,0,1,1},color={1,1,1,1}}
@@ -95,7 +86,7 @@ def main():
         canvas.convert('RGB').save(out/(p.id+'.png'))
         rows.append((p.id,p.layoutStatus,canvas.convert('RGB').copy()))
         images.clear()
-    if not rows:raise SystemExit('Vehicle has no prepared assets: '+str(args.vehicle)+'. Run tools/setup_assets.py (with --dlc-export for DLC V8 Supercars).')
+    if not rows:raise SystemExit('Unsupported vehicle ID: '+str(args.vehicle))
     if not args.vehicle:
         font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',14)
         for page in range(math.ceil(len(rows)/24)):

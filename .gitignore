@@ -2,8 +2,11 @@
 __pycache__/
 inspection/.live-*.lua
 
-# Private game assets and all derived textures/metadata are built locally.
-/assets/
+# Runtime textures and metadata are bundled. Ignore old setup outputs and archives.
+/assets/library/
+/assets/installed.lua
+/assets/setup-report.json
+/assets/**/sources.txt
 /local_bootstrap.lua
 /catalog/sources/
 /catalog/geometry/

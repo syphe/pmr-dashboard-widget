@@ -20,14 +20,16 @@ background `94907551087803446661754f41cf1140915b454482522ffe5624180241d1ab88`;
 mask `6c0360f1c7e531ba1e69872d24a867869b5ba243886b0e5bd970f61ce871c7c2`.
 This export used the owned game's mounted resource API; no package was decrypted
 or unpacked externally. Textures, derived metadata, dumps and previews remain
-ignored local files.
+local research files; the required runtime textures and metadata are now bundled
+under `assets/` in source control.
 
-Run [inspection/export-camaro-assets.lua](inspection/export-camaro-assets.lua)
-after loading the local bootstrap while driving this car. Then run
-`python tools/setup_assets.py --dlc-export inspection` to prepare available
-profiles, including this Camaro. It also works with
-`--vehicle Chevrolet_Camaro_V8Supercar_2024`; the shared Supra/DDU10 font
-dependency is prepared automatically. Mustang exports are not required.
+Users load `script.lua` directly; no DLC export or asset setup is required.
+For development recaptures, run
+[inspection/export-camaro-assets.lua](inspection/export-camaro-assets.lua)
+after loading the dashboard while driving this car. The optional
+`tools/prepare_v8_supercar.py --vehicle Chevrolet_Camaro_V8Supercar_2024`
+converter rebuilds its textures from that local export. The shared Supra/DDU10
+font is included in the bundle.
 
 ## Layout and bindings
 
@@ -62,8 +64,9 @@ and map 3. A bounded probe completed 60 native telemetry updates and 60 draws,
 then restored both callbacks. Three overlays were cached: background, icons and
 shared font. Pausing hid the widget; the game was left paused.
 
-Local tests cover independent Camaro export setup in a clean authored-files-only
-checkout, missing DLC exports, exact vehicle selection, switching from Mustang
+The earlier setup tests verified independent Camaro conversion. Current tests
+load all bundled dashboards from a portable checkout without setup scripts or a
+game install. They also cover exact vehicle selection, switching from Mustang
 without stale readings/resources, profile reload and the shared draw path.
 Completed laps, full RPM range and light/wiper/lock transitions have not been
 visually exercised for this car.
