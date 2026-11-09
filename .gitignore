@@ -1,0 +1,19 @@
+.tools/
+__pycache__/
+inspection/.live-*.lua
+
+# Private game assets and all derived textures/metadata are built locally.
+/assets/
+/local_bootstrap.lua
+/catalog/sources/
+/catalog/geometry/
+/catalog/vehicles.json
+/catalog/files.json
+/catalog/REPORT.md
+/tools/editor_geometry_jobs.lua
+
+# Captures, logs and previews may contain original game artwork/data.
+/inspection/*
+!/inspection/*.lua
+/inspection/.live-*.lua
+/reference/
