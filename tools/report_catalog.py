@@ -9,14 +9,14 @@ rows=json.loads((ROOT/'catalog/vehicles.json').read_text())
 files=json.loads((ROOT/'catalog/files.json').read_text())
 enabled=[r for r in rows if not exclusion_reason(r)]
 excluded=[r for r in rows if exclusion_reason(r)]
-profile_count=len(enabled)+1
+profile_count=len(list((ROOT/'profiles').glob('*.lua')))
 types=Counter(w['type'] for r in rows for w in r['widgets'])
 text=['# Offline vehicle dashboard capture','',
       f'{len(rows)} local vehicles, {len(files)} source files ({sum(f["bytes"] for f in files)/1024**2:.1f} MiB), and 97 readable scene geometry exports.',
       '','Every declared node binding in the selected top page and first main page resolved. The actor XML copies also preserve the other pages.',
-      '', f'**Original game assets only:** {len(enabled)} local dashboards are enabled, plus the existing DLC Mustang ({profile_count} profiles total). {len(excluded)} profiles requiring analogue or custom replacement artwork have been removed. Their original source captures remain available; they have no generated profile, replacement textures or gallery entry.',
+      '', f'**Original game assets only:** {len(enabled)} local dashboards are enabled, plus the DLC Mustang and Camaro ({profile_count} authored profiles total). {len(excluded)} profiles requiring analogue or custom replacement artwork have been removed. Their original source captures remain available; they have no generated profile, replacement textures or gallery entry.',
       '', '**Coverage is not fidelity validation.** Generated layouts still require calibration. Some warning icons and visibility/colour controls are preserved in the source but are not animated by the generated profiles. Missing live telemetry displays `--`. Units and layout still require comparison in game.',
-      '', 'The hand-tuned Supra is included below. The existing DLC Mustang (`Ford_Mustang_V8Supercar_2024`) is retained separately. Its earlier runtime capture is documented in `MUSTANG_FINDINGS.md`.',
+      '', 'The hand-tuned Supra is included below. DLC profiles `Ford_Mustang_V8Supercar_2024` and `Chevrolet_Camaro_V8Supercar_2024` are retained separately. Their runtime captures are documented in `MUSTANG_FINDINGS.md` and `CAMARO_FINDINGS.md`.',
       '', '## Captured main-page widget types','', '| Type | Count |','| --- | ---: |']
 text += [f'| {k} | {v} |' for k,v in sorted(types.items())]
 text += ['', '## Vehicles','', '| Vehicle ID / profile | Main page | Layout status | Captured widgets | Auxiliary digits |', '| --- | --- | --- | ---: | ---: |']

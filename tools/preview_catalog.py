@@ -25,7 +25,7 @@ source(ROOT..'profile_registry.lua')
 source(ROOT..'catalog/vehicles.lua')
 source(ROOT..'assets/installed.lua')
 for _,file in ipairs(DashboardMod.installedAssetSources) do source(ROOT..file) end
-for _,id in ipairs({'Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024'}) do
+for _,id in ipairs({'Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024','Chevrolet_Camaro_V8Supercar_2024'}) do
  if DashboardMod.installedVehicleIds[id] then source(ROOT..'profiles/'..id..'.lua') end
 end
 for _,entry in ipairs(DashboardMod.catalog) do
@@ -95,7 +95,7 @@ def main():
         canvas.convert('RGB').save(out/(p.id+'.png'))
         rows.append((p.id,p.layoutStatus,canvas.convert('RGB').copy()))
         images.clear()
-    if not rows:raise SystemExit('Vehicle has no prepared assets: '+str(args.vehicle)+'. Run tools/setup_assets.py (with --dlc-export for the DLC Mustang).')
+    if not rows:raise SystemExit('Vehicle has no prepared assets: '+str(args.vehicle)+'. Run tools/setup_assets.py (with --dlc-export for DLC V8 Supercars).')
     if not args.vehicle:
         font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',14)
         for page in range(math.ceil(len(rows)/24)):

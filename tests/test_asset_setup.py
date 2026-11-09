@@ -49,9 +49,11 @@ with tempfile.TemporaryDirectory(prefix='clean checkout with spaces-',dir=scratc
     env=dict(os.environ)
     env['PYTHONPATH']=str(ROOT/'.tools/python')+os.pathsep+env.get('PYTHONPATH','')
     subprocess.run([sys.executable,str(checkout/'tools/setup_assets.py'),'--game',str(installed),
-                    '--vehicle','Ford_Mustang_GT3_2023','--vehicle','Ford_Mustang_V8Supercar_2024'],env=env,check=True)
+                    '--vehicle','Ford_Mustang_GT3_2023','--vehicle','Ford_Mustang_V8Supercar_2024',
+                    '--vehicle','Chevrolet_Camaro_V8Supercar_2024'],env=env,check=True)
     assert (checkout/'assets/vehicles/Ford_Mustang_GT3_2023/background.dds').is_file()
     assert not (checkout/'assets/Ford_Mustang_V8Supercar_2024').exists()
+    assert not (checkout/'assets/Chevrolet_Camaro_V8Supercar_2024').exists()
     assert not (checkout/'assets/library').exists()
     assert not (checkout/'catalog/sources').exists()
     assert not (checkout/'catalog/geometry').exists()
@@ -82,3 +84,15 @@ assert(DashboardMod.installedVehicleIds.Toyota_Supra_GT4)
 assert(not DashboardMod.installedVehicleIds.Ford_Mustang_GT3_2023)
 ''')
         print('Optional local DLC export setup and its shared-font dependency passed')
+    if all((exports/name).is_file() for name in ('camaro-background.dds','camaro-mask.dds')):
+        subprocess.run([sys.executable,str(checkout/'tools/setup_assets.py'),'--game',str(installed),
+                        '--vehicle','Chevrolet_Camaro_V8Supercar_2024','--dlc-export',str(exports)],env=env,check=True)
+        assert (checkout/'assets/Chevrolet_Camaro_V8Supercar_2024/icons.dds').is_file()
+        lua.execute('''
+source(entry)
+assert(#DashboardMod.profiles==2)
+assert(DashboardMod.installedVehicleIds.Chevrolet_Camaro_V8Supercar_2024)
+assert(not DashboardMod.installedVehicleIds.Ford_Mustang_V8Supercar_2024)
+assert(DashboardMod.camaroAssets.font==DashboardMod.supraAssets.font)
+''')
+        print('Camaro-only DLC setup loads independently of Mustang assets')

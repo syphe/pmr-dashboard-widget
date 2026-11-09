@@ -46,7 +46,7 @@ g_racingManager={active=true,playerVehicleData={vehicleActor=actor('Toyota_Supra
  bestLap={timeSeconds=82.93,invalid=false},lapDelta=-.27}),
  bestValidLapTime={timeSeconds=82.93,invalid=false}}}
 ''')
-for file in ['profile_registry.lua','tests/mock_assets.lua','profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua','dashboard_widget.lua']:
+for file in ['profile_registry.lua','tests/mock_assets.lua','profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua','profiles/Chevrolet_Camaro_V8Supercar_2024.lua','dashboard_widget.lua']:
     lua.execute((ROOT/file).read_text())
 lua.execute('''
 local m=DashboardMod
@@ -142,6 +142,23 @@ local count=0;for _ in pairs(m.resources) do count=count+1 end
 assert(count==3)
 print('Mustang profile, shared font and indicator checks passed')
 ''')
-for file in ['profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua']:
+for file in ['profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua','profiles/Chevrolet_Camaro_V8Supercar_2024.lua']:
     lua.execute((ROOT/file).read_text())
-lua.execute("assert(#DashboardMod.profiles==2, 'Profile reload removed or duplicated a car')")
+lua.execute('''
+local m=DashboardMod
+assert(#m.profiles==3,'Profile reload removed or duplicated a car')
+g_racingManager.playerVehicleData.vehicleActor=actor('Chevrolet_Camaro_V8Supercar_2024.i3d',{
+ gear=2,revs=7100,map=3,engine_temp=116,brakebias=65,israce=true})
+m.refresh(0)
+assert(m.profile.id=='Chevrolet_Camaro_V8Supercar_2024')
+assert(m.values.gear==2 and m.values.engineTemp==116 and m.values.brakeBias==65)
+assert(m.values.indicator_lights==nil and next(m.resources)==nil,'Old car resources/readings survived')
+renderedPaths={}
+m.drawDashboard({left=.3,bottom=.02,width=.4,height=.38})
+assert(renderedPaths['unused/assets/Chevrolet_Camaro_V8Supercar_2024/background.dds'])
+assert(renderedPaths['unused/assets/Chevrolet_Camaro_V8Supercar_2024/icons.dds'])
+assert(not renderedPaths['unused/assets/Ford_Mustang_V8Supercar_2024/background.dds'])
+-- An unrelated Camaro GT4 root cannot match the V8 profile either.
+assert(m.findProfile({components={car={root='Chevrolet_Camaro_ZL-1_GT4_2017.i3d'}}})==nil)
+print('Camaro profile, car-switch isolation and original-asset selection passed')
+''')

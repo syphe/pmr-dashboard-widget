@@ -10,7 +10,7 @@ end
 assert(DashboardMod.installedVehicleIds,'Run tools/setup_assets.py to prepare local game assets')
 for _,file in ipairs(DashboardMod.installedAssetSources) do source(DashboardMod.root..file) end
 DashboardMod.profiles={}
-for _,id in ipairs({'Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024'}) do
+for _,id in ipairs({'Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024','Chevrolet_Camaro_V8Supercar_2024'}) do
     if DashboardMod.installedVehicleIds[id] then source(DashboardMod.root..'profiles/'..id..'.lua') end
 end
 for _,entry in ipairs(DashboardMod.catalog) do

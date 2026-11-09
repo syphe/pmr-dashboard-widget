@@ -67,7 +67,7 @@ def refine():
         row['primaryDigits']=len(primary);row['auxiliaryDigits']=len(p['auxiliaryFields'])
         file.write_text('-- Generated profile. Refine through catalog/calibrations.json.\nDashboardMod.registerProfile('+lua(p)+')\n')
     (ROOT/'catalog/vehicles.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
-    print('Refined',sum(not exclusion_reason(r) and r['id']!='Toyota_Supra_GT4' for r in rows),'asset-based profiles; preserved the hand-tuned Supra and DLC Mustang')
+    print('Refined',sum(not exclusion_reason(r) and r['id']!='Toyota_Supra_GT4' for r in rows),'asset-based profiles; preserved the hand-tuned Supra and DLC V8 Supercars')
 
 
 if __name__=='__main__':refine()

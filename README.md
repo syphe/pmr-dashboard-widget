@@ -2,7 +2,7 @@
 
 Dashboard profiles select by exact vehicle ID, including separate Mustang GT3,
 GT4 and V8 Supercar dashboards. There are 56 supported local digital panels plus
-an optional DLC Mustang profile. Analogue recreations and replacement artwork
+optional DLC Mustang and Camaro profiles. Analogue recreations and replacement artwork
 are excluded. The Corvette C5R and MX-5 use their original digital panels only.
 
 **Game artwork is not distributed with this repository.** Each user prepares
@@ -55,10 +55,10 @@ Restart the game after changing the asset availability list: native `source()`
 was observed to cache loaded scripts. The IDE's **FS Lua: Reload Script in Game**
 can reload an individual profile and `dashboard_widget.lua` for layout tuning.
 
-## Optional DLC Mustang
+## Optional DLC V8 Supercars
 
-The DLC Mustang's textures are in an encrypted mounted package, so ordinary file
-copying cannot prepare that car. Default setup skips it and still prepares the
+The DLC Mustang and Camaro textures are in an encrypted mounted package, so ordinary file
+copying cannot prepare those cars. Default setup skips them and still prepares the
 loose-file cars. If you have exported the textures locally through your installed
 game's mounted-resource API, supply that directory:
 
@@ -66,10 +66,13 @@ game's mounted-resource API, supply that directory:
 python tools/setup_assets.py --dlc-export "D:/My local PMR exports"
 ```
 
-The directory must contain `mustang-background.dds` and `mustang-mask.dds`.
-[inspection/export-mustang-assets.lua](inspection/export-mustang-assets.lua) is an
-optional console helper to obtain these from the owned, mounted car. Load the
-local bootstrap first; then run the helper while driving the DLC Mustang. Its
+For the Mustang, supply `mustang-background.dds` and `mustang-mask.dds`;
+for the Camaro, supply `camaro-background.dds` and `camaro-mask.dds`. Either
+pair works independently; both can share the same folder.
+[inspection/export-mustang-assets.lua](inspection/export-mustang-assets.lua) and
+[inspection/export-camaro-assets.lua](inspection/export-camaro-assets.lua) are
+console helpers to obtain these from the owned, mounted car. Load the local
+bootstrap first; then run the corresponding helper while driving that car. Their
 outputs stay in the ignored `inspection/` directory. Setup also builds the shared
 Supra/DDU10 font dependency. It does not decrypt packages or download assets.
 
@@ -117,7 +120,9 @@ Most profiles are experimental projections and still need visual calibration and
 live comparisons. Some warning icons and colour/visibility controls have not yet
 been animated. The Supra and DLC Mustang have earlier in-game checks documented
 in [MOTEC_FINDINGS.md](MOTEC_FINDINGS.md) and [MUSTANG_FINDINGS.md](MUSTANG_FINDINGS.md).
-Those checks do not validate every generated profile.
+The Camaro's capture and in-game check are documented in
+[CAMARO_FINDINGS.md](CAMARO_FINDINGS.md). Those checks do not validate every
+generated profile.
 
 ## Checks and previews
 

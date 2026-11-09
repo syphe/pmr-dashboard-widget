@@ -16,6 +16,11 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'.tools/python'))
 from game_install import find_game_install
 
+DLC_EXPORTS={
+    'Ford_Mustang_V8Supercar_2024':'mustang',
+    'Chevrolet_Camaro_V8Supercar_2024':'camaro',
+}
+
 
 def python_value(value):
     from lupa import lua_type
@@ -31,7 +36,7 @@ def definitions(project):
     engine.execute('DashboardMod={profiles={},registerProfile=function(p) table.insert(DashboardMod.profiles,p) end}')
     engine.execute((project/'catalog/vehicles.lua').read_text())
     entries=[{'id':'Toyota_Supra_GT4','file':'profiles/Toyota_Supra_GT4.lua'},
-             {'id':'Ford_Mustang_V8Supercar_2024','file':'profiles/Ford_Mustang_V8Supercar_2024.lua'}]
+             *[{'id':id,'file':f'profiles/{id}.lua'} for id in DLC_EXPORTS]]
     entries+=python_value(engine.globals().DashboardMod.catalog)
     for entry in entries:
         engine.execute((project/entry['file']).read_text())
@@ -101,10 +106,11 @@ def write_installed(project,stage,ready,failures):
     assets=project/'assets';assets.mkdir(parents=True,exist_ok=True)
     sources=[]
     if 'Toyota_Supra_GT4' in ready:sources.append('assets/Toyota_Supra_GT4/metadata.lua')
-    if 'Ford_Mustang_V8Supercar_2024' in ready:sources.append('assets/Ford_Mustang_V8Supercar_2024/metadata.lua')
+    for id in DLC_EXPORTS:
+        if id in ready:sources.append(f'assets/{id}/metadata.lua')
     sources.append('assets/fonts/metadata.lua')
     for id in sorted(ready):
-        relative=Path(id) if id in ('Toyota_Supra_GT4','Ford_Mustang_V8Supercar_2024') else Path('vehicles')/id
+        relative=Path(id) if id=='Toyota_Supra_GT4' or id in DLC_EXPORTS else Path('vehicles')/id
         shutil.copytree(stage/'assets'/relative,assets/relative,dirs_exist_ok=True)
     shutil.copytree(stage/'assets/fonts',assets/'fonts',dirs_exist_ok=True)
     # Publish availability last, so missing optional cars never load stale assets.
@@ -122,8 +128,7 @@ def setup(game,project=ROOT,vehicles=None,dlc_export=None):
     requested=set(vehicles or profiles)
     unknown=requested-set(profiles)
     if unknown:raise ValueError('Unsupported vehicle IDs: '+', '.join(sorted(unknown)))
-    dlc='Ford_Mustang_V8Supercar_2024'
-    if dlc in requested and dlc_export:requested.add('Toyota_Supra_GT4')
+    if requested.intersection(DLC_EXPORTS) and dlc_export:requested.add('Toyota_Supra_GT4')
     actors={}
     for path in (game/'data/vehicles').rglob('*actor.xml'):
         actors[path.relative_to(game/'data/vehicles').parts[0]]=path
@@ -131,7 +136,7 @@ def setup(game,project=ROOT,vehicles=None,dlc_export=None):
     scratch=project/'.tools';scratch.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='asset-setup-',dir=scratch) as directory:
         stage=Path(directory);imp=builder(game,stage)
-        for id in sorted(requested- {dlc}):
+        for id in sorted(requested-set(DLC_EXPORTS)):
             if id not in actors:failures[id]='Vehicle is not present as loose files in this installation';continue
             try:
                 if id=='Toyota_Supra_GT4':
@@ -140,16 +145,17 @@ def setup(game,project=ROOT,vehicles=None,dlc_export=None):
                 ready.add(id);print('Prepared '+id,flush=True)
             except (OSError,ValueError,KeyError,StopIteration,ET.ParseError,subprocess.CalledProcessError) as error:
                 failures[id]=str(error)
-        if dlc in requested:
+        for dlc,slug in DLC_EXPORTS.items():
+            if dlc not in requested:continue
             if not dlc_export:
                 failures[dlc]='Encrypted DLC is not available as loose files. Optional: --dlc-export <folder> containing your mounted-resource exports.'
             elif 'Toyota_Supra_GT4' not in ready:
                 failures[dlc]='Shared Supra/DDU10 font assets are unavailable'
-            elif not all((dlc_export/name).is_file() for name in ('mustang-background.dds','mustang-mask.dds')):
-                failures[dlc]='Export folder must contain mustang-background.dds and mustang-mask.dds'
+            elif not all((dlc_export/f'{slug}-{kind}.dds').is_file() for kind in ('background','mask')):
+                failures[dlc]=f'Export folder must contain {slug}-background.dds and {slug}-mask.dds'
             else:
                 try:
-                    subprocess.run([sys.executable,str(project/'tools/prepare_mustang.py'),'--exports',str(dlc_export),'--output',str(stage)],check=True)
+                    subprocess.run([sys.executable,str(project/'tools/prepare_v8_supercar.py'),'--vehicle',dlc,'--exports',str(dlc_export),'--output',str(stage)],check=True)
                     ready.add(dlc)
                 except subprocess.CalledProcessError as error:failures[dlc]='DLC export conversion failed: '+str(error)
         (stage/'assets/fonts').mkdir(parents=True,exist_ok=True)
@@ -165,7 +171,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--game',type=Path,help='PMR install directory; otherwise detect Steam libraries or PMR_INSTALL_DIR')
     parser.add_argument('--vehicle',action='append',help='Build only this exact supported ID (repeatable)')
-    parser.add_argument('--dlc-export',type=Path,help='Optional folder containing locally exported DLC Mustang textures')
+    parser.add_argument('--dlc-export',type=Path,help='Optional folder containing locally exported DLC Mustang/Camaro textures')
     args=parser.parse_args()
     try:
         game=find_game_install(args.game);print('PMR installation: '+str(game),flush=True)
