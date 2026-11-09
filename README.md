@@ -98,3 +98,21 @@ textures. DLC export helpers in `inspection/` support development recaptures.
 `tools/refine_catalog.py` applies `catalog/calibrations.json` adjustments, and
 `tools/report_catalog.py` generates a capture report. None of these tools needs
 to run before using the bundled widget.
+
+## Live vehicle catalogue and capture
+
+[catalog/GAME_VEHICLES.md](catalog/GAME_VEHICLES.md) lists the live catalogue,
+including DLC and inactive entries. Vehicle mods and custom liveries are excluded.
+The same records are available as
+[CSV](catalog/game-vehicles.csv) and [JSON](catalog/game-vehicles.json).
+
+Raw live captures are in the ignored `inspection/live-catalog/` directory:
+vehicle/actor XML, scene definitions, dashboard textures, fonts and mesh binaries,
+plus source paths and content hashes. They are research inputs for future
+profiles; the bundled runtime assets are unchanged by a capture.
+
+The developer helpers `inspection/vehicle-catalog-capture.lua` and
+`inspection/capture-vehicle-assets.lua` run through the connected game's console.
+`tools/live_catalog.py refresh --log <PMR log>` reads their output, `plan` creates
+a dependency-copy job list, `verify` checks the saved files, and `report` writes
+the catalogue and hashed asset inventory. These are optional research tools.

@@ -32,6 +32,11 @@ function mod.vehicleId(actor)
     end
 end
 function mod.findProfile(actor)
+    local components=actor and actor.components
+    for _,path in ipairs({components and components.AIComp and components.AIComp.xmlFilename or false,
+        components and components.AudioComp and components.AudioComp.actorXmlFileName or false}) do
+        if type(path)=='string' and path:gsub('\\','/'):lower():find('/mods/',1,true) then return nil end
+    end
     local id=mod.vehicleId(actor)
     if id then
         for excluded in pairs(mod.excludedVehicles or {}) do

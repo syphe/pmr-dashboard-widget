@@ -3,7 +3,7 @@
 -- The shared renderer handles placement and unit conversion; add future cars here.
 local profile = {
         id='Toyota_Supra_GT4', name='Toyota GR Supra GT4 Evo',
-        rootNames={'Toyota_Supra_GT4_Evo.i3d','toyota_supra_v8.i3d'},layoutStatus='hand-tuned',
+        rootNames={'Toyota_Supra_GT4_Evo.i3d'},layoutStatus='hand-tuned',
         width=862, height=511, topPadding=40, assetDirectory='assets/Toyota_Supra_GT4/',
         fields={
             {id='fuelPrevious', param='previousFuelDelta', x=195,y=116,height=24,format='%.2fL',min=0},

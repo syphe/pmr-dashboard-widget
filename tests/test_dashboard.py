@@ -160,5 +160,12 @@ assert(renderedPaths['unused/assets/Chevrolet_Camaro_V8Supercar_2024/icons.dds']
 assert(not renderedPaths['unused/assets/Ford_Mustang_V8Supercar_2024/background.dds'])
 -- An unrelated Camaro GT4 root cannot match the V8 profile either.
 assert(m.findProfile({components={car={root='Chevrolet_Camaro_ZL-1_GT4_2017.i3d'}}})==nil)
+-- A custom actor must not select an official profile through its reused model.
+for _,component in ipairs({'AIComp','AudioComp'}) do
+ local components={car={root='Toyota_Supra_GT4_Evo.i3d'}}
+ components[component]={[component=='AIComp' and 'xmlFilename' or 'actorXmlFileName']=
+  'C:/PMR/mods/custom-car/data/actor.xml'}
+ assert(m.findProfile({components=components})==nil)
+end
 print('Camaro profile, car-switch isolation and original-asset selection passed')
 ''')
