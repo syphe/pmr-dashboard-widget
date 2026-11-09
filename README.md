@@ -1,122 +1,144 @@
 # PMR dashboard widget
 
-Two main-page profiles are implemented: **Toyota GR Supra GT4 Evo** and **AUS V8
-Evo Mustang** (`Ford_Mustang_V8Supercar_2024`). They use original display artwork,
-DDU10 glyphs and live vehicle bindings. Each always shows Page1 regardless of the
-cockpit dash's current page or popup. The Supra model is also used by the
-referenced V8 Supra mod.
+Dashboard profiles select by exact vehicle ID, including separate Mustang GT3,
+GT4 and V8 Supercar dashboards. There are 56 supported local digital panels plus
+an optional DLC Mustang profile. Analogue recreations and replacement artwork
+are excluded. The Corvette C5R and MX-5 use their original digital panels only.
 
-Other cars hide the widget until they have a profile. The renderer detects the
-player's vehicle and discards the previous car's readings/resources on a change.
+**Game artwork is not distributed with this repository.** Each user prepares
+textures, fonts and shader-mask atlases from their own installation. The game
+and GIANTS Editor can both be closed during setup.
 
-## Run
+## Set up local assets
 
-Use this repository's `script.lua` as the game script, as with the original
-prototype. Its root directory is set near the top of that file. No Python package
-is required to run the widget in PMR; the prepared DDS assets are included.
-
-The widget ID remains `hudDashboard`. It registers separate gameplay and HUD
-layout-editor containers. Its position can be moved and saved by the game's
-layout editor. It hides during pause, stock HUD hiding and completed sessions.
-The default width is 32% of the screen, with aspect-correct height.
-
-## Tune a dashboard
-
-Edit [profiles/supra.lua](profiles/supra.lua) or
-[profiles/mustang.lua](profiles/mustang.lua). Coordinates refer to each original
-1024 x 512 texture with a top-left origin; the renderer handles the cropped
-background and the game's bottom-left normalized coordinates. Profiles select
-their own assets, lamps and indicators. Reloading one preserves the other.
-
-```lua
-{id='pressureFL', param='wheel1.tyre_pressure',
- x=199, y=420, height=25, align='right',
- dx=0, dy=0, widthScale=1, heightScale=1,
- scale=.00001, offset=0, format='%.2f'}
-```
-
-| Setting | Effect |
-| --- | --- |
-| `param` / `method` / `constant` | Named vehicle parameter, actor getter, or fixed label |
-| `x`, `y`, `dx`, `dy` | Anchor and additional per-field pixel offsets |
-| `height`, `heightScale`, `widthScale` | Digit size and proportions |
-| `align` | `left`, `right`, or centred by default |
-| `scale`, `offset` | Displayed value = raw value × scale + offset |
-| `convert` | Optional `function(value, actor)` after scale/offset |
-| `format`, `kind` | Lua numeric format, `time`, or `gear` |
-| `color`, `high`, `low` | Normal colour and warning thresholds |
-
-Tyre pressure converts Pa to bar. Speed uses `getForwardSpeedKPH()` and absolute
-value to match the km/h label. Temperatures and brake bias use named getters in
-their observed Celsius/percentage units. LapTime objects use `timeSeconds`;
-invalid best laps and unavailable readings show `--`. Delta uses the live
-`lapDelta` parameter and requires a valid best lap. Negative fuel-used readings
-during reset/out-lap are hidden. The original `PwrStr` and `Thrtl` entries are
-fixed at zero in the actor XML, so those labels retain zero here.
-
-Supra gauges have separate `min`, `max`, colours and warning thresholds. They use
-65 cached fill states extracted from the original shader masks. Shift lights
-use the current actor's shift-light range. The Mustang uses four recovered shift
-thresholds, lock lamps and headlight/wiper icons. The Supra caches six overlays;
-the Mustang caches three. Textures are not created per field or per frame.
-
-For code changes, open the changed Lua file and run **FS Lua: Reload Script in
-Game** through the GIANTS IDE extension. Reload `dashboard_widget.lua` after
-profile changes to apply them immediately. Plain `source()` caches loaded files
-in the inspected PMR session; `loadfile()` and `reloadResource()` did not execute
-updated Lua as expected. Repeated renderer reloads preserve widget placement and
-do not stack update hooks or add duplicate editor entries.
-
-To change the widget's default size/position, edit `mod.config` in
-`dashboard_widget.lua`. A persisted game placement takes precedence over defaults.
-In a running session, `DashboardMod.config.width = .36` changes the width on the
-next update; config is retained across renderer reloads.
-
-## Prepare assets and check locally
-
-The converter reads the installed game under the `DATA` path in
-`tools/prepare_supra.py`. It generates the cropped background, gauge frame atlases,
-font and metadata. DDS files include BC3 compression and complete mip chains.
-The sharp source font lacks the actor's degree symbol; the converter adds that
-small glyph to its empty slot.
-
-Mustang textures were read from the running game's mounted DLC resources. See
-[MUSTANG_FINDINGS.md](MUSTANG_FINDINGS.md). To refresh them, run
-`inspection/export-mustang-assets.lua` through the connected console while in
-the Mustang, then run `python tools/prepare_mustang.py`. Prepared assets are
-already present for normal use.
+Install Python and the build dependencies, then run:
 
 ```powershell
 python -m pip install --target .tools/python -r requirements-dev.txt
-python tools/prepare_supra.py
-python tests/test_dashboard.py
-python tools/preview_supra.py
-python tools/preview_supra.py --profile mustang
+python tools/setup_assets.py
 ```
 
-The preview executes the actual Lua drawing functions and writes
-[inspection/supra-preview.png](inspection/supra-preview.png).
+The script finds PMR through Steam, including secondary Steam libraries. To
+select an installation explicitly:
 
-## Validation
+```powershell
+python tools/setup_assets.py --game "D:/SteamLibrary/steamapps/common/Project Motor Racing"
+```
 
-Verified in the running game on 9 November 2026: the final DDS build rendered
-60 native draw calls and received 60 native telemetry updates, with exactly one
-layout-editor entry. Gear, TC, ABS, tyre pressures and temperatures agreed with
-the stock HUD while stationary. Pause hiding was visually checked. Native
-evidence is in [inspection/supra-runtime.txt](inspection/supra-runtime.txt).
+`PMR_INSTALL_DIR` is also supported. The source installation is read only. Setup
+reads the original main-page materials and fonts, converts overlays locally, and
+validates texture dimensions and gauge mappings against the authored profiles.
+It does not require copied actor XMLs, an asset archive or editor geometry exports
+from another computer, and does not overwrite the profile code.
 
-The Mustang also completed 60 native updates/draws with three overlays and one
-editor entry. Its gear, position, lap, engine temperature, brake bias and map were
-checked in game. See [inspection/mustang-runtime.txt](inspection/mustang-runtime.txt)
-and [inspection/mustang-preview.png](inspection/mustang-preview.png).
+Generated files go into `assets/`. `assets/setup-report.json` lists prepared and
+skipped cars. A car missing from the local installation, or whose artwork no
+longer matches its profile, is skipped with a reason. No replacement dashboard
+is generated. Use `--vehicle Ford_Mustang_GT3_2023` to prepare only one profile;
+this replaces the available-profile list until setup is rerun for all cars.
 
-Local regression checks cover unit/offset conversion, lap-time objects and
-rounding, missing/invalid telemetry, car replacement, update ownership,
-registration/reload idempotency, saved placement and pause/finish hiding.
-They also cover Mustang asset selection, shared-font lookup, boolean indicators,
-session labels, one-decimal timing and independent profile reloads.
+## Run
 
-A driven lap, physical layout-editor dragging/save, full game restart, and
-selection of the V8 mod have not been tested during this implementation. Gauge
-fill and shift-light behaviour across the full driving range still need that
-comparison. The widget does not switch the cockpit Motec page or modify its data.
+Use the generated **`local_bootstrap.lua`** as the game startup script. It supplies
+the absolute path to this checkout, then loads `script.lua` and only those
+profiles whose assets were prepared successfully. It is machine-specific and
+ignored by Git. Alternatively a mod loader can set `DashboardMod.root` or supply
+`g_currentModDirectory` before loading `script.lua`.
+
+The widget ID is `hudDashboard`. It uses the native HUD layout editor for moving
+and saving its position, and hides during pause, HUD hiding and finished sessions.
+The default width is 32% of the screen. Resource caches and readings are cleared
+when the player's car changes. Each dash stays on its first main page regardless
+of cockpit page switches or popups. Unsupported/unprepared cars hide the widget.
+
+Restart the game after changing the asset availability list: native `source()`
+was observed to cache loaded scripts. The IDE's **FS Lua: Reload Script in Game**
+can reload an individual profile and `dashboard_widget.lua` for layout tuning.
+
+## Optional DLC Mustang
+
+The DLC Mustang's textures are in an encrypted mounted package, so ordinary file
+copying cannot prepare that car. Default setup skips it and still prepares the
+loose-file cars. If you have exported the textures locally through your installed
+game's mounted-resource API, supply that directory:
+
+```powershell
+python tools/setup_assets.py --dlc-export "D:/My local PMR exports"
+```
+
+The directory must contain `mustang-background.dds` and `mustang-mask.dds`.
+[inspection/export-mustang-assets.lua](inspection/export-mustang-assets.lua) is an
+optional console helper to obtain these from the owned, mounted car. Load the
+local bootstrap first; then run the helper while driving the DLC Mustang. Its
+outputs stay in the ignored `inspection/` directory. Setup also builds the shared
+Supra/DDU10 font dependency. It does not decrypt packages or download assets.
+
+## What to commit
+
+Commit authored Lua profiles, renderer code, setup/conversion tools, tests,
+`catalog/vehicles.lua`, `catalog/exclusions.json` and `catalog/calibrations.json`.
+The following are private local outputs and are ignored:
+
+- `assets/`, including original copies, converted textures and font metadata.
+- `catalog/sources/`, `catalog/geometry/`, `catalog/vehicles.json`, `catalog/files.json`
+  and the generated capture report.
+- Inspection images, previews, runtime dumps and resource lists.
+- `local_bootstrap.lua`, `.tools/` and generated editor job lists.
+
+Before committing, check the Git index:
+
+```powershell
+python tools/check_repo_assets.py
+```
+
+Ignoring files does not remove copies already present in earlier commits. This
+change removes them from current tracking; existing Git history is not rewritten.
+
+## Tune a profile
+
+Profiles are named `profiles/<vehicle ID>.lua`. They contain bindings, positions,
+formatting, colour thresholds and references to locally generated artwork.
+Coordinates use each original texture's top-left origin; the renderer handles
+cropping, normalized screen coordinates and aspect ratio.
+
+```lua
+{id='pressureFL', param='wheel1.tyre_pressure', x=199,y=420,height=25,
+ align='right', dx=0,dy=0, scale=.00001,offset=0, format='%.2f'}
+```
+
+Bindings support `param`, `method` or `constant`; conversions support `scale`,
+`offset` and an optional Lua `convert` function. `widthScale`, `heightScale`,
+`dx` and `dy` tune individual readouts. Formatting supports numeric formats, gear
+and lap-time values. Missing/invalid telemetry displays `--`. Known pressure
+bindings convert Pa to bar, speed uses `getForwardSpeedKPH()`, and lap-time objects
+use `timeSeconds`. Units outside the previously checked getters need verification.
+
+Most profiles are experimental projections and still need visual calibration and
+live comparisons. Some warning icons and colour/visibility controls have not yet
+been animated. The Supra and DLC Mustang have earlier in-game checks documented
+in [MOTEC_FINDINGS.md](MOTEC_FINDINGS.md) and [MUSTANG_FINDINGS.md](MUSTANG_FINDINGS.md).
+Those checks do not validate every generated profile.
+
+## Checks and previews
+
+```powershell
+python tests/test_dashboard.py
+python tests/test_asset_setup.py
+python tests/test_catalog.py
+python tools/preview_catalog.py
+```
+
+The behavior tests use metadata-only fixtures and do not require game artwork.
+Setup tests check Steam discovery and, when PMR is installed, build and load a
+clean checkout containing authored files only. Catalogue checks and previews
+require local asset setup. The generated gallery is `inspection/catalog.html`.
+
+## Optional development capture
+
+The original research tools remain available for developing additional mappings.
+`tools/vehicle_catalog.py` captures local main-page definitions and source assets;
+`tools/editor_geometry_export.lua` exports vertices/UVs through the installed PMR
+GIANTS Editor. All copied source data and geometry stay in ignored directories.
+After a local capture, `tools/refine_catalog.py` applies field adjustments from
+`catalog/calibrations.json` and `tools/report_catalog.py` generates a capture report.
+These development captures are not a prerequisite for end-user asset setup.

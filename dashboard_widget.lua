@@ -55,18 +55,6 @@ function mod.readNumber(actor, binding)
     if not finite(value) or (binding.min and value<binding.min) then return nil end
     return value
 end
-function mod.findProfile(actor)
-    local components=actor and actor.components
-    local car=components and components.car
-    local root=car and (car.root or car.i3dNode)
-    if not root or root==0 then return nil end
-    local ok,name=pcall(getName,root)
-    if not ok or type(name)~='string' then return nil end
-    name=string.lower(name)
-    for _,profile in ipairs(mod.profiles) do
-        if string.find(name,profile.rootPattern,1,true) then return profile end
-    end
-end
 function mod.refresh(dt)
     mod.clock=(mod.clock or 0)+(finite(dt) and math.max(0,dt)/1000 or 0)
     local data=g_racingManager and g_racingManager.playerVehicleData
@@ -80,7 +68,7 @@ function mod.refresh(dt)
     if not profile then return end
     local values={}
     for _,field in ipairs(profile.fields) do values[field.id]=mod.readNumber(actor,field) end
-    for _,gauge in ipairs(profile.gauges) do values['gauge_'..gauge.id]=mod.readNumber(actor,{param=gauge.param}) end
+    for _,gauge in ipairs(profile.gauges) do values['gauge_'..gauge.id]=mod.readNumber(actor,gauge) end
     if values.gauge_rpm==nil then values.gauge_rpm=mod.readNumber(actor,{param='revs'}) end
     for _,indicator in ipairs(profile.indicators or {}) do
         values['indicator_'..indicator.id]=mod.readNumber(actor,{param=indicator.param,boolean=true})
@@ -97,7 +85,15 @@ function mod.refresh(dt)
     values.shiftMax=finite(max) and max or 8000
     values.bestValid=data.bestValidLapTime and data.bestValidLapTime.invalid==false
         and finite(data.bestValidLapTime.timeSeconds) and data.bestValidLapTime.timeSeconds>0
-    if not values.bestValid then values.delta=nil end
+    if not values.bestValid then
+        values.delta=nil
+        for _,field in ipairs(profile.fields) do
+            if field.param=='lapDelta' then values[field.id]=nil end
+        end
+        for _,gauge in ipairs(profile.gauges) do
+            if gauge.param=='lapDelta' then values['gauge_'..gauge.id]=nil end
+        end
+    end
     mod.values=values
 end
 function mod.shouldDraw()
@@ -122,7 +118,7 @@ function mod.format(field,value)
     if field.text then return finite(value) and value>0 and field.text or '' end
     if not finite(value) or (field.positive and value<=0) then return '--' end
     if field.kind=='gear' then
-        if value<0 then return 'R' elseif value==0 then return 'N' end
+        if value<0 then return 'R' elseif value==0 then return field.zeroNeutral and '0' or 'N' end
         return string.format('%.0f',value)
     elseif field.kind=='time' then
         if value<0 or value>=3600 then return '--' end
@@ -153,7 +149,8 @@ local function renderImage(overlay,x,y,w,h,color)
 end
 function mod.drawText(profile,bounds,field,text,color)
     local meta=profile.assets or mod.supraAssets
-    local font=meta.font
+    local font=(field.font and mod.fonts and mod.fonts[field.font]) or meta.font
+    if not font then return end
     local overlay=getOverlay(profile,font.file,profile.fontDirectory)
     local height=field.height*(field.heightScale or 1)
     local widthScale=field.widthScale or 1
@@ -168,6 +165,7 @@ function mod.drawText(profile,bounds,field,text,color)
     if field.align=='right' then x=x-total elseif field.align~='left' then x=x-total/2 end
     local y=field.y+(field.dy or 0)-height/2
     local crop=meta.crop
+    if profile.clampText then x=math.max(crop.x,math.min(x,crop.x+crop.width-total)) end
     local sx,sy=bounds.width/profile.width,bounds.height/profile.height
     for i=1,#text do
         local glyph=font.glyphs[text:sub(i,i)] or font.glyphs['-']
@@ -202,8 +200,8 @@ function mod.drawDashboard(bounds,profile,values)
             if gauge.high and value>gauge.high then color=gauge.highColor or red end
             if gauge.low and value<gauge.low then color=gauge.lowColor or red end
             renderImage(overlay,bounds.left+(asset.x-meta.crop.x)*sx,
-                bounds.bottom+(meta.crop.height-(asset.y-meta.crop.y)-asset.height)*sy,
-                asset.width*sx,asset.height*sy,color)
+                bounds.bottom+(meta.crop.height-(asset.y-meta.crop.y)-(asset.displayHeight or asset.height))*sy,
+                (asset.displayWidth or asset.width)*sx,(asset.displayHeight or asset.height)*sy,color)
         end
     end
     -- Ten main-page delta segments, centred on zero. Missing best lap stays dark.
@@ -239,7 +237,8 @@ function mod.drawDashboard(bounds,profile,values)
         local value=values[field.id]
         local color=field.color or white
         if finite(value) then
-            if (field.high and value>field.high) or (field.low and value<field.low) then color=red end
+            if field.high and value>field.high then color=field.highColor or red end
+            if field.low and value<field.low then color=field.lowColor or red end
             if field.deltaColor then color=value<0 and green or red end
         end
         mod.drawText(profile,bounds,field,mod.format(field,value),color)
@@ -251,7 +250,7 @@ function mod.drawDashboard(bounds,profile,values)
     local count=lights and #lights or 7
     for i=1,count do
         local light=lights and lights[i]
-        local threshold=light and light.threshold or start+(i-1)/6*math.max(1,finish-start)
+        local threshold=light and light.threshold or start+(light and light.fraction or (i-1)/6)*math.max(1,finish-start)
         local lit=finite(rpm) and rpm>=threshold
         local c=lit and (light and light.color or (i<3 and green or i<5 and {1,.65,.05,1} or red)) or {.08,.09,.1,1}
         if lit and rpm>=(values.shiftMax or 8000) and math.floor((mod.clock or 0)*8)%2==1 then c={.08,.09,.1,1} end

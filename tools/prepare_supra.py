@@ -5,13 +5,18 @@ import io
 import struct
 import sys
 import xml.etree.ElementTree as ET
+import argparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / '.tools/python'))
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = Path(r'C:\Program Files (x86)\Steam\steamapps\common\Project Motor Racing\data')
-OUT = ROOT / 'assets/supra'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--game',type=Path,default=Path(r'C:\Program Files (x86)\Steam\steamapps\common\Project Motor Racing'))
+parser.add_argument('--output',type=Path,default=ROOT)
+args=parser.parse_args()
+DATA = args.game / 'data'
+OUT = args.output / 'assets/Toyota_Supra_GT4'
 OUT.mkdir(parents=True, exist_ok=True)
 TEX = DATA / 'vehicles/Toyota_Supra_GT4/Textures'
 

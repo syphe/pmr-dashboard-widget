@@ -2,8 +2,9 @@
 -- Each field supports dx/dy, height, widthScale, scale/offset and format/convert.
 -- The shared renderer handles placement and unit conversion; add future cars here.
 local profile = {
-        id='supra', name='Toyota GR Supra GT4 Evo', rootPattern='toyota_supra',
-        width=862, height=511, topPadding=40, assetDirectory='assets/supra/',
+        id='Toyota_Supra_GT4', name='Toyota GR Supra GT4 Evo',
+        rootNames={'Toyota_Supra_GT4_Evo.i3d','toyota_supra_v8.i3d'},layoutStatus='hand-tuned',
+        width=862, height=511, topPadding=40, assetDirectory='assets/Toyota_Supra_GT4/',
         fields={
             {id='fuelPrevious', param='previousFuelDelta', x=195,y=116,height=24,format='%.2fL',min=0},
             {id='fuelUsed', param='fuelDelta', x=195,y=173,height=14,format='%.2fL',min=0},

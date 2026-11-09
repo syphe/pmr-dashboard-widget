@@ -4,6 +4,7 @@ import io
 import shutil
 import struct
 import sys
+import argparse
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'.tools/python'))
 from PIL import Image
@@ -22,10 +23,14 @@ def save_dds(im,path):
     struct.pack_into('<I',header,108,0x1000|0x8|0x400000)
     path.write_bytes(header+b''.join(item[128:] for item in levels))
 
-out=ROOT/'assets/mustang'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--exports',type=Path,default=ROOT/'inspection')
+parser.add_argument('--output',type=Path,default=ROOT)
+args=parser.parse_args()
+out=args.output/'assets/Ford_Mustang_V8Supercar_2024'
 out.mkdir(parents=True,exist_ok=True)
-background=ROOT/'inspection/mustang-background.dds'
-mask=Image.open(ROOT/'inspection/mustang-mask.dds').convert('RGB')
+background=args.exports/'mustang-background.dds'
+mask=Image.open(args.exports/'mustang-mask.dds').convert('RGB')
 assert Image.open(background).size==(1024,512) and mask.size==(1024,512)
 shutil.copyfile(background,out/'background.dds')
 atlas=Image.new('RGBA',(128,64))

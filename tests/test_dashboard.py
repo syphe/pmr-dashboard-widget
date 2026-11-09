@@ -46,13 +46,13 @@ g_racingManager={active=true,playerVehicleData={vehicleActor=actor('Toyota_Supra
  bestLap={timeSeconds=82.93,invalid=false},lapDelta=-.27}),
  bestValidLapTime={timeSeconds=82.93,invalid=false}}}
 ''')
-for file in ['assets/supra/metadata.lua','assets/mustang/metadata.lua','profiles/supra.lua','profiles/mustang.lua','dashboard_widget.lua']:
+for file in ['profile_registry.lua','tests/mock_assets.lua','profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua','dashboard_widget.lua']:
     lua.execute((ROOT/file).read_text())
 lua.execute('''
 local m=DashboardMod
 m.install()
 local a=g_racingManager.playerVehicleData.vehicleActor
-assert(m.profile.id=='supra')
+assert(m.profile.id=='Toyota_Supra_GT4')
 assert(math.abs(m.values.pressureFL-1.37831328)<.000001)
 assert(m.values.actual==41.27 and m.values.speed==20)
 assert(m.format({kind='gear'},0)=='N')
@@ -96,7 +96,7 @@ assert(h.absPosition[1]==.2 and h.absPosition[2]==.3)
 g_racingManager.playerVehicleData.vehicleActor=actor('OtherCar')
 m.refresh(0);assert(m.profile==nil and next(m.values)==nil)
 g_racingManager.playerVehicleData.vehicleActor=actor('Toyota_Supra_GT4_Evo.i3d',{gear=4})
-m.refresh(0);assert(m.profile.id=='supra' and m.values.gear==4 and m.values.pressureFL==nil)
+m.refresh(0);assert(m.profile.id=='Toyota_Supra_GT4' and m.values.gear==4 and m.values.pressureFL==nil)
 -- Reinstall and module reload must not stack update wrappers or duplicate widgets.
 m.install();update(1);assert(stockUpdates==1)
 ''')
@@ -112,7 +112,7 @@ local m=DashboardMod
 g_racingManager.playerVehicleData.vehicleActor=actor('Ford_Mustang_V8Supercar_2024.i3d',{
  gear=3,revs=6500,map=2,engine_temp=108,israce=true,lights=true,wiper=false,frontLocked=0,rearLocked=1})
 m.refresh(0)
-assert(m.profile.id=='mustang_v8_evo' and m.values.map==2 and m.values.engineTemp==108)
+assert(m.profile.id=='Ford_Mustang_V8Supercar_2024' and m.values.map==2 and m.values.engineTemp==108)
 assert(m.values.race==1 and m.values.qualifying==nil)
 assert(m.values.indicator_lights==1 and m.values.indicator_wiper==0 and m.values.indicator_rearLocked==1)
 assert(m.values.pressureFL==nil and m.values.gauge_rpm==6500)
@@ -134,14 +134,14 @@ function Overlay.new(filename)
 end
 function drawFilledRect(x,y,w,h) assert(w>=0 and h>=0 and x==x and y==y) end
 m.drawDashboard({left=.3,bottom=.02,width=.4,height=.38})
-assert(renderedPaths['unused/assets/mustang/background.dds'])
-assert(renderedPaths['unused/assets/mustang/icons.dds'])
-assert(renderedPaths['unused/assets/supra/font.dds'])
-assert(not renderedPaths['unused/assets/supra/background.dds'])
+assert(renderedPaths['unused/assets/Ford_Mustang_V8Supercar_2024/background.dds'])
+assert(renderedPaths['unused/assets/Ford_Mustang_V8Supercar_2024/icons.dds'])
+assert(renderedPaths['unused/assets/Toyota_Supra_GT4/font.dds'])
+assert(not renderedPaths['unused/assets/Toyota_Supra_GT4/background.dds'])
 local count=0;for _ in pairs(m.resources) do count=count+1 end
 assert(count==3)
 print('Mustang profile, shared font and indicator checks passed')
 ''')
-for file in ['profiles/supra.lua','profiles/mustang.lua']:
+for file in ['profiles/Toyota_Supra_GT4.lua','profiles/Ford_Mustang_V8Supercar_2024.lua']:
     lua.execute((ROOT/file).read_text())
 lua.execute("assert(#DashboardMod.profiles==2, 'Profile reload removed or duplicated a car')")

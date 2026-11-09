@@ -1,9 +1,10 @@
 -- Recovered from the active DLC car's MotecComponent on 9 November 2026.
 -- Main page only. Texture positions are pixels, top-left origin.
 local profile={
-    id='mustang_v8_evo',name='AUS V8 Evo Mustang',rootPattern='ford_mustang_v8supercar_2024',
-    width=1024,height=552,topPadding=40,assetDirectory='assets/mustang/',
-    fontDirectory='assets/supra/',assets=DashboardMod.mustangAssets,deltaBar=false,
+    id='Ford_Mustang_V8Supercar_2024',name='AUS V8 Evo Mustang',
+    rootNames={'Ford_Mustang_V8Supercar_2024.i3d'},layoutStatus='hand-tuned',
+    width=1024,height=552,topPadding=40,assetDirectory='assets/Ford_Mustang_V8Supercar_2024/',
+    fontDirectory='assets/Toyota_Supra_GT4/',assets=DashboardMod.mustangAssets,deltaBar=false,
     fields={
         {id='gear',param='gear',x=510,y=246,height=220,kind='gear'},
         {id='best',param='bestLap',x=850,y=123,height=60,kind='time',decimals=1,positive=true},
