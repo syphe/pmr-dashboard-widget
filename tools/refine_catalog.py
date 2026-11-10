@@ -4,6 +4,7 @@ Use after adjusting catalog/calibrations.json. Does not touch hand-tuned profile
 """
 from pathlib import Path
 import json
+import argparse
 import sys
 import xml.etree.ElementTree as ET
 
@@ -12,6 +13,7 @@ sys.path.insert(0,str(ROOT/'.tools/python'))
 from lupa import LuaRuntime,lua_type
 from vehicle_catalog import lua
 from dash_geometry import load_nodes,layout
+from dash_bounds import layout_bounds
 from catalog_policy import exclusion_reason
 
 
@@ -22,11 +24,13 @@ def python(value):
     return {k:python(v) for k,v in value.items()}
 
 
-def refine():
+def refine(vehicles=None):
     rows=json.loads((ROOT/'catalog/vehicles.json').read_text())
     tuning=json.loads((ROOT/'catalog/calibrations.json').read_text())
     engine=LuaRuntime();engine.execute('DashboardMod={registerProfile=function(p) imported=p end}')
+    refined=0
     for row in rows:
+        if vehicles and row['id'] not in vehicles:continue
         if exclusion_reason(row):continue
         if row['id']=='Toyota_Supra_GT4':continue
         file=ROOT/row['profile']
@@ -44,9 +48,15 @@ def refine():
         if palette:
             for scene in row['scenes']:
                 path=ROOT/'catalog/geometry'/(row['id']+'__'+scene+'.xml')
+                if not path.exists():continue
                 nodes=load_nodes(path)
                 if palette not in nodes:continue
-                _,report,_=layout(fields,row['nodes'],scene,palette,nodes,p['assets']['background']['width'],p['assets']['background']['height'])
+                try:
+                    _,report,_=layout(fields,row['nodes'],scene,palette,nodes,p['assets']['background']['width'],p['assets']['background']['height'])
+                except ValueError:
+                    bounds=ROOT/'inspection/live-catalog/bounds'/path.name
+                    if not bounds.exists():raise
+                    _,report=layout_bounds(fields,row['nodes'],scene,palette,load_nodes(bounds),p['assets']['background']['width'],p['assets']['background']['height'],tuning.get(row['id'],{}).get('screen',{}))
                 row['geometry']=report
                 break
         config=tuning.get(row['id'],{})
@@ -60,14 +70,24 @@ def refine():
             f['height']*=config.get('heightScale',1)
             f.update(c)
             if original.get(f['id'],{}).get('zeroNeutral')=='true':f['zeroNeutral']=True
-            if f['id'] in outside and not c.get('includeInPrimary',False):p['auxiliaryFields'].append(f)
+            if (f['id'] in outside and not c.get('includeInPrimary',False)) or (config.get('onlyConfiguredFields') and f['id'] not in config.get('fields',{})):p['auxiliaryFields'].append(f)
             else:primary.append(f)
         p['fields']=primary;p['clampText']=True
+        p['layoutStatus']=config.get('layoutStatus',p['layoutStatus'])
+        if 'paletteControls' in config:p['paletteControls']=config['paletteControls']
+        if 'paletteAtlas' in config:p['assets']['palette']=config['paletteAtlas']
+        if config.get('displayCrop'):
+            p['assets']['crop']=config['displayCrop']
+            p['width']=p['assets']['crop']['width'];p['height']=p['assets']['crop']['height']+p['topPadding']
         row['layoutStatus']=p['layoutStatus']
         row['primaryDigits']=len(primary);row['auxiliaryDigits']=len(p['auxiliaryFields'])
         file.write_text('-- Generated profile. Refine through catalog/calibrations.json.\nDashboardMod.registerProfile('+lua(p)+')\n')
+        refined+=1
     (ROOT/'catalog/vehicles.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
-    print('Refined',sum(not exclusion_reason(r) and r['id']!='Toyota_Supra_GT4' for r in rows),'asset-based profiles; preserved the hand-tuned Supra and DLC V8 Supercars')
+    print('Refined',refined,'asset-based profiles; preserved the hand-tuned Supra and DLC V8 Supercars')
 
 
-if __name__=='__main__':refine()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--vehicle',action='append',help='Refine only an exact vehicle ID; repeat for more cars')
+    args=parser.parse_args();refine(set(args.vehicle) if args.vehicle else None)

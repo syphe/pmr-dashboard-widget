@@ -3,6 +3,7 @@
 Captured from the running game at 2026-11-10 08:40:29: **123 base-game and DLC cars**.
 Includes inactive definitions; an entry is not proof that the car is available to drive.
 IDs below are actor-folder IDs used by dashboard profiles; the CSV/JSON also preserve the separate catalogue IDs.
+Dashboard support and analogue exclusions are listed in [PROFILE_COVERAGE.md](PROFILE_COVERAGE.md).
 
 | Package / entitlement key | Entries | Active |
 | --- | ---: | ---: |

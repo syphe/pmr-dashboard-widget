@@ -37,6 +37,8 @@ def fill_atlases(maps,widgets,out,width,height):
             'displayWidth':bw,'displayHeight':bh,'frames':count,'columns':cols,'atlasWidth':aw,'atlasHeight':ah}
         gauge={'id':id,'param':w.get('vehicleParam'),'min':float(w.get('minValue',0)),
             'max':float(w.get('maxValue',1)),'color':[float(w.get(c,1)) for c in 'rgb']+[1]}
+        param=w.get('vehicleParam','')
+        if param.endswith('tyre_pressure') or param in ('fuel_pressure','oil_pressure'):gauge['scale']=.00001
         for source,target in [('highThreshold','high'),('lowThreshold','low')]:
             if source in w:gauge[target]=float(w[source])
         gauges.append(gauge)

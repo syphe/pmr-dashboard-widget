@@ -1,0 +1,2044 @@
+[
+  {
+    "vehicleId": "Acura_ARX-06_2023",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Acura_ARX-06_2023.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "6370aef86b79ddfc0627af4d4315325ca9191c5c88bf6511becb5486123386a4",
+    "digits": 32,
+    "auxiliaryDigits": 4,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Acura_ARX-06_2023/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Honda_NSX_GT3",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Honda_NSX_GT3.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "b76bbd7ac43fbe10017f754ead363c1016513ddee03b4470482529ef389545ab",
+    "digits": 12,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Honda_NSX_GT3/background.dds",
+      "assets/vehicles/Honda_NSX_GT3/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Alpine_A110_GT4_2020",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Alpine_A110_GT4_2020.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "f57a6ee28638f520271effb13aed3d0f2a49ffac36cc01a0a4c446b6350dcd91",
+    "digits": 19,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Alpine_A110_GT4_2020/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Alpine_A424_2024",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Alpine_A424_2024.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "5b7f7dd6b506c62c6ae32d7d567b97efa93a9741d60ab210821f181015a47c2a",
+    "digits": 38,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Alpine_A424_2024/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Aston_Martin_Vantage_GT3_Evo",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_Vantage_GT3_Evo.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "6f4ce1d70e2b114b87c838b0c840e2195c0a9a996f76b05f061977276b162f91",
+    "digits": 25,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GT3_Evo/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Aston_Martin_Vantage_GT3",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_Vantage_GT3.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "281029ad16c4adfc0ca8a2dd2658fec7b9f8d223a9bf62b22d4aa84ca1b208d8",
+    "digits": 24,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GT3/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Aston_Martin_Vantage_AMR_GT4",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_Vantage_AMR_GT4.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "e493cf6935db5bb03e904e23127badf12c96126f7371e1417f0aa1b79047256a",
+    "digits": 14,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Aston_Martin_Vantage_AMR_GT4/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Aston_Martin_DBR9_2005",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_DBR9_2005.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "fea36ca2d1df658a3da963ba6b65451bb9113db3b9d728275df3f6f33d064806",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/dotMatrix.dds",
+      "assets/vehicles/Aston_Martin_DBR9_2005/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Aston_Martin_Valkyrie_LMH_2025",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_Valkyrie_LMH_2025.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "d7e8f1c3d822c5b839662453b8df7453991c38281284fd5becf98366016f040c",
+    "digits": 35,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Aston_Martin_Valkyrie_LMH_2025/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Audi_90_IMSA_GTO_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Audi_R8_LMP900_2002",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Audi_R8_LMP900_2002.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "3e3bdde5ce029aa17d7f5dd88cf1740dca30c3197883d12811e5f27844f7fed8",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Audi_R8_LMP900_2002/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Audi_R8_LMS_GT3_EVO",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Audi_R8_LMS_GT3_EVO.lua",
+    "layoutStatus": "geometry-calibrated-unverified",
+    "captureMethod": "mesh-uv-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "runtime-audited",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "bc89868ba8f700e64c177471ccd6e72c86ff3354742746f5005edb794200c51e",
+    "digits": 25,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Audi_R8_LMS_GT3_EVO/background.dds",
+      "assets/vehicles/Audi_R8_LMS_GT3_EVO/palette.dds"
+    ]
+  },
+  {
+    "vehicleId": "Audi_R8_LMS_GT4_EVO",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Audi_R8_LMS_GT4_EVO.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "0ad24d045ad42824143fe0ee5898a6263bb6433260259c9c24cef7469d5fff3c",
+    "digits": 17,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Audi_R8_LMS_GT4_EVO/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_M_Hybrid_V8",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_M_Hybrid_V8.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "43d924e4268f93573bedded3c772db08c655818011723451e488303d13d5288c",
+    "digits": 33,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/BMW_M_Hybrid_V8/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_M3_E46_GTR",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_M3_E46_GTR.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "bf052a5d24ed011e2a722145938dcefa2003732975b50606284941fd1c00f67f",
+    "digits": 6,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/DIGIT_BOLD.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/BMW_M3_E46_GTR/background.dds",
+      "assets/vehicles/BMW_M3_E46_GTR/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_M4_GT3",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_M4_GT3.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "c562ae9032d509f73ba8773f64bb8c154d01fd59630eae4ccb5583579f1091a3",
+    "digits": 23,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/BMW_M4_GT3/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_M4_GT4",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_M4_GT4.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "03232898bec32fce17448e5211f94a075ffba96132d40920c6da61e4cc7a6cd0",
+    "digits": 18,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/vehicles/BMW_M4_GT4/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_V12_LMR",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_V12_LMR.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "fd952366a782a4399bcb9e78aae77d9ea940ed92f2a1d7ee9744f158eabde389",
+    "digits": 5,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/BMW_V12_LMR/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Cadillac_Northstar_LMP900",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Cadillac_Northstar_LMP900.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "8ee9a840378649f9771675ec1dd24db8ccbf0f34f336557ca895d3a233c93d60",
+    "digits": 7,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Cadillac_Northstar_LMP900/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Cadillac_V_SeriesR",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Cadillac_V_SeriesR.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "81cbf461558a44c561994bebf506d2bfa68aa0d2a1a831c198e010446924ceb4",
+    "digits": 32,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Cadillac_V_SeriesR/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Camaro_Z28_GTO_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Chevrolet_Camaro_ZL-1_GT4_2017",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Camaro_ZL-1_GT4_2017.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "65993bb5037b1a9bf51caea463fb8ba87aa2113087f250c4e73ba7cd56c125a7",
+    "digits": 16,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/motecgenuine.dds",
+      "assets/fonts/motecgenuineitalic.dds",
+      "assets/vehicles/Chevrolet_Camaro_ZL-1_GT4_2017/background.dds",
+      "assets/vehicles/Chevrolet_Camaro_ZL-1_GT4_2017/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C5R",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Corvette_C5R.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "9386f37e998b3edc14ced9d967de31cc95ec7a5732464bf0cf1243550cbe10e0",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/dotMatrix.dds",
+      "assets/vehicles/Chevrolet_Corvette_C5R/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C6R",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Corvette_C6R.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "ff928d1fee796d221c3e15fedff97794e805a991bd4081108cbf8ff35db85a60",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Chevrolet_Corvette_C6R/background.dds",
+      "assets/vehicles/Chevrolet_Corvette_C6R/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_Z06_GT3_2024",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Corvette_Z06_GT3_2024.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "2622cbf102047f693d79f171107f40b96f806b1e3edb0ec733e0f2611efbc08b",
+    "digits": 35,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/LICENSE_PLATE_UK.dds",
+      "assets/vehicles/Chevrolet_Corvette_Z06_GT3_2024/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chrysler_Viper_GTS-R",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chrysler_Viper_GTS-R.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "1e016f60edb9970e783eaa19b9125e7d04a8eab636004223da1a8be73e8e90b0",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Chrysler_Viper_GTS-R/background.dds",
+      "assets/vehicles/Chrysler_Viper_GTS-R/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Dodge_Viper_CC",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Dodge_Viper_CC.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "d6ae215dc010952d73a371a390aed3b13b32fd32fb76c415297bd5c86b331ab0",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Dodge_Viper_CC/background.dds",
+      "assets/vehicles/Dodge_Viper_CC/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Ford_Mustang_GT3_2023",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Ford_Mustang_GT3_2023.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "023f4c87fee405dafd03e520ae5cb576e75ed37880379baabd49c548d6d3b222",
+    "digits": 33,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/fonts/motecgenuine.dds",
+      "assets/vehicles/Ford_Mustang_GT3_2023/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Ford_Mustang_GT4_2024",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Ford_Mustang_GT4_2024.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "06a7cfa16713e2c76a28bbcf1fbab09cdaf72f9a0614b95ce783fba3aa7edfc4",
+    "digits": 10,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/fonts/motecgenuineitalic.dds",
+      "assets/vehicles/Ford_Mustang_GT4_2024/background.dds",
+      "assets/vehicles/Ford_Mustang_GT4_2024/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Gillet_Vertigo_2004",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Gillet_Vertigo_2004.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "5d5689c712cd0ceddbb19d0fe28a8f41d87c49184161f33e763dcfb0d1b9eea3",
+    "digits": 9,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Gillet_Vertigo_2004/background.dds",
+      "assets/vehicles/Gillet_Vertigo_2004/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Jaguar_XJR-9",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Lamborghini_Huracan_GT3_Evo_2022",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Lamborghini_Huracan_GT3_Evo_2022.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "32773e950dc8904092eceb65552f91e24c8f3bcb3dadab2cd280375e61fc8ecd",
+    "digits": 25,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Lamborghini_Huracan_GT3_Evo_2022/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Lamborghini_Murcielago_R-GT_2004",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Lamborghini_Murcielago_R-GT_2004.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "57a0e64c6f5a5a0ee4f5b6676146589bf0e7a18dbaac67614003ea5e9cd3dd0f",
+    "digits": 3,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/dotMatrix.dds",
+      "assets/vehicles/Lamborghini_Murcielago_R-GT_2004/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Lamborghini_SC63_LMDh_2024",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Lamborghini_SC63_LMDh_2024.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "deb0b3cec7971fb6832ab205c7f45b15d78029033f7faab8288632f93e309c29",
+    "digits": 32,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Lamborghini_SC63_LMDh_2024/background.dds",
+      "assets/vehicles/Lamborghini_SC63_LMDh_2024/gauge-chargebar1.dds",
+      "assets/vehicles/Lamborghini_SC63_LMDh_2024/gauge-chargebar2.dds",
+      "assets/vehicles/Lamborghini_SC63_LMDh_2024/gauge-chargebar3.dds"
+    ]
+  },
+  {
+    "vehicleId": "Lamborghini_Temerario_2026",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Lister_storm_gt",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Lister_storm_gt.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "958fa18f0bcb738e5c8205312e014b2476feb5cc862d919d05efba4dc404017b",
+    "digits": 9,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Lister_storm_gt/background.dds",
+      "assets/vehicles/Lister_storm_gt/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Lola_T70_MK3B_1970",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Lotus_Elise_GT1_1997",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Lotus_Elise_GT1_1997.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "8da7ce68ea5d4fb4083889cffa5f0a994e8ce4fec95b1adf4c7b3f31b429b1ef",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Lotus_Elise_GT1_1997/background.dds",
+      "assets/vehicles/Lotus_Elise_GT1_1997/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Marcos_Mantara_LM600_GT2_2004",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Marcos_Mantara_LM600_GT2_2004.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "2007c55b049209eef2aa809f34e2cfeb28d650c1d702fa8379fbdb893646b86e",
+    "digits": 9,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Marcos_Mantara_LM600_GT2_2004/background.dds",
+      "assets/vehicles/Marcos_Mantara_LM600_GT2_2004/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Maserati_MC12_GT1",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Maserati_MC12_GT1.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "58da2c0bb4088dbff8b2ed7c514e75f711b93514364ebda66212d1c06aa88fdf",
+    "digits": 7,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DIGIT_BOLD.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Maserati_MC12_GT1/background.dds",
+      "assets/vehicles/Maserati_MC12_GT1/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mazda_787B_1991",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mazda_787B_1991.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mesh-uv-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "56b91f35859b261b49e2ff6abfd21e4ad67ce86f7986099d1817be1cdf1b860b",
+    "digits": 10,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DIGIT_BOLD.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Mazda_787B_1991/background.dds",
+      "assets/vehicles/Mazda_787B_1991/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mazda_MX-5_Cup_2017",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mazda_MX-5_Cup_2017.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "6be6881cb67874acce325bab38fe1da39c9a6077492582d8e7eb04f6c9ccba20",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Mazda_MX-5_Cup_2017/background.dds",
+      "assets/vehicles/Mazda_MX-5_Cup_2017/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mazda_RX-7_GTO_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Mercedes_AMG_GT3_Evo_2020",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mercedes_AMG_GT3_Evo_2020.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "a94111f0f9042e61afb541bb8216f21bf92fedc5f29dfeaf191147678f64fd4f",
+    "digits": 17,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Mercedes_AMG_GT3_Evo_2020/background.dds",
+      "assets/vehicles/Mercedes_AMG_GT3_Evo_2020/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mercedes_AMG_GT4",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mercedes_AMG_GT4.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "cf45b3336c48175fb42d9b0126b008d5e9615643840dfce49a5131787ae6fa95",
+    "digits": 17,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Mercedes_AMG_GT4/background.dds",
+      "assets/vehicles/Mercedes_AMG_GT4/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mercedes_CLK-LM_1998",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mercedes_CLK-LM_1998.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "0a63b644176813d1b668a81e7db29e9aca3c9dc0ed9ab9388ec1f622765db3c3",
+    "digits": 4,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Mercedes_CLK-LM_1998/background.dds",
+      "assets/vehicles/Mercedes_CLK-LM_1998/gauge-revs_digit.dds"
+    ]
+  },
+  {
+    "vehicleId": "Sauber_C9_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Mercury_Cougar_XR-7_GTO_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Morgan_Aero_8_GTN",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Morgan_Aero_8_GTN.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "7801d4b6dd1cfec8c37c97eeca97ebe051a814b0f54f8986c7c4b6619b52db14",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Morgan_Aero_8_GTN/background.dds",
+      "assets/vehicles/Morgan_Aero_8_GTN/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Mosler_MT900R_2004",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Mosler_MT900R_2004.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "16d3338e0ab7806350f8cd7a1a41710304c23d8bf3cb6c6cbe8603f96f7b7f31",
+    "digits": 9,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Mosler_MT900R_2004/background.dds",
+      "assets/vehicles/Mosler_MT900R_2004/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_300ZX_IMSA_GTO_1989",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Nissan_R390_GT1",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_R390_GT1.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "a8e78e1254ce9460e2aeef639a94a6bc10aa148027697a42303f8ca81ad87ff8",
+    "digits": 5,
+    "auxiliaryDigits": 2,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Nissan_R390_GT1/background.dds",
+      "assets/vehicles/Nissan_R390_GT1/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_R89C",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Nissan_Z_GT4_2023",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_Z_GT4_2023.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "b43133bd180e6a5bf3bb4bec4d72664a103e9a34c55bd60c23373c9888d80fa2",
+    "digits": 13,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/fonts/motecgenuineitalic.dds",
+      "assets/vehicles/Nissan_Z_GT4_2023/background.dds",
+      "assets/vehicles/Nissan_Z_GT4_2023/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Panoz_Esperante_GTR1",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Panoz_Esperante_GTR1.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "369fd97d798523ed1b25eccaeb8d2389000a2de0f70cb691ce8892547274ef85",
+    "digits": 7,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Panoz_Esperante_GTR1/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Panoz_LMP1_Roadster_S_99",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Panoz_LMP1_Roadster_S_99.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "5061f0a589b3ab7c7b4e3f0bb905ad527a156188ec52f1e69a177bb9ce9111b6",
+    "digits": 7,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/DIGIT_BOLD.dds",
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Panoz_LMP1_Roadster_S_99/background.dds",
+      "assets/vehicles/Panoz_LMP1_Roadster_S_99/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Peugeot_9X8_2024",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Peugeot_9X8_2024.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "5ce7fb3588dd0cb061aa5b4ff864a5f25fbf757f242fb919d8486219a339f986",
+    "digits": 35,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Peugeot_9X8_2024/background.dds",
+      "assets/vehicles/Peugeot_9X8_2024/gauge-charge_green.dds",
+      "assets/vehicles/Peugeot_9X8_2024/gauge-charge_yellow.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_Cayman_GT4_Clubsport_2022",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_Cayman_GT4_Clubsport_2022.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "8c615f85cc2f8bbb219c82e401fdfb8bb5598e0b4effca785fdcabd044445b42",
+    "digits": 17,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Porsche_Cayman_GT4_Clubsport_2022/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_Carrera_Cup_1990",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Porsche_911_GT1_98",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_911_GT1_98.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "8cea849f8397b74efca3e8662ed0077d26c7d2fe1dd11afaf51fa235a9d94c8e",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Porsche_911_GT1_98/background.dds",
+      "assets/vehicles/Porsche_911_GT1_98/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_911_GT3_Cup_2022",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_911_GT3_Cup_2022.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "bd33420af54d2f228cf678c7dcbedce2632d105c4b38057cb83c532a704bd949",
+    "digits": 23,
+    "auxiliaryDigits": 1,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Porsche_911_GT3_Cup_2022/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_992_GT3R",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_992_GT3R.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "924a58ce3f575a0530ed7d3a1c4ab41a813345ba55956c90573a6ba9f0b06150",
+    "digits": 23,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Porsche_992_GT3R/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_911_GT3-RSR_2004",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_911_GT3-RSR_2004.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "c6d8b58e7c4889e6c10c363c5ed30fe224ba28ee95c916db22e324e43b587ccd",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Porsche_911_GT3-RSR_2004/background.dds",
+      "assets/vehicles/Porsche_911_GT3-RSR_2004/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_917K_1970",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Porsche_962C_88",
+    "package": "Base game",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Porsche_963",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_963.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "ba3ba96ce3a72107dfb2824468e0f5df7c451d1cfdb6fbef570adf549eb6156a",
+    "digits": 32,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Porsche_963/background.dds",
+      "assets/vehicles/Porsche_963/gauge-chargebar1.dds",
+      "assets/vehicles/Porsche_963/gauge-chargebar2.dds",
+      "assets/vehicles/Porsche_963/gauge-chargebar3.dds"
+    ]
+  },
+  {
+    "vehicleId": "Saleen_S7R",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Saleen_S7R.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "1fdecc50e8ec539d8aa0b092ff844e55eb4cc5529629fc5d82bccd7cc30f4bab",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/Saleen_S7R/background.dds",
+      "assets/vehicles/Saleen_S7R/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "TVR_Tuscan_T400R_2002",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/TVR_Tuscan_T400R_2002.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "0f765134eab10b974a83e502e09b0f897096dd3f0af7e9fd216c1b4272a455e4",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/fonts/LICENSE_PLATE_CZ.dds",
+      "assets/vehicles/TVR_Tuscan_T400R_2002/background.dds",
+      "assets/vehicles/TVR_Tuscan_T400R_2002/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Toyota_Supra_GT4",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Toyota_Supra_GT4.lua",
+    "layoutStatus": "hand-tuned",
+    "captureMethod": "live-motec-and-artwork",
+    "calibrationStatus": "hand-tuned",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "06ac03bd8d58177eb4cfa13e30e4f97b281561f1df6660f599b7245786f042fb",
+    "digits": 20,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/Toyota_Supra_GT4/background.dds",
+      "assets/Toyota_Supra_GT4/font.dds",
+      "assets/Toyota_Supra_GT4/fuel.dds",
+      "assets/Toyota_Supra_GT4/oil.dds",
+      "assets/Toyota_Supra_GT4/rpm.dds",
+      "assets/Toyota_Supra_GT4/water.dds"
+    ]
+  },
+  {
+    "vehicleId": "Toyota_GR010",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Toyota_GR010.lua",
+    "layoutStatus": "geometry-unverified",
+    "captureMethod": "mesh-uv",
+    "calibrationStatus": "generated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "78f6a24b15ceb3c70fb108c9f9b17b5e3383071377bc380c31b83c7996d51889",
+    "digits": 29,
+    "auxiliaryDigits": 2,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Toyota_GR010/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Toyota_GT-One_TS020",
+    "package": "Base game",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Toyota_GT-One_TS020.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mesh-uv-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "4c1ca63922f781dddb7f3116d2ad7b8781ee9a905854556f0eff300b03cd409d",
+    "digits": 14,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/dotMatrix.dds",
+      "assets/vehicles/Toyota_GT-One_TS020/background.dds",
+      "assets/vehicles/Toyota_GT-One_TS020/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "AMC_Javelin_Trans_Am_1971",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Chevrolet_Camaro_Z28_Trans_Am_1969",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "TA2_Chevrolet_Camaro_2024",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/TA2_Chevrolet_Camaro_2024.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "301f7e75ea7d526f076437fec115499d463ba6435d4351370f2f688c05f5804e",
+    "digits": 12,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/background.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs1.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs2.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs3.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs4.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs5.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs6.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs7.dds",
+      "assets/vehicles/TA2_Chevrolet_Camaro_2024/gauge-revs8.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Camaro_V8Supercar_2024",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Camaro_V8Supercar_2024.lua",
+    "layoutStatus": "hand-tuned",
+    "captureMethod": "live-motec-and-artwork",
+    "calibrationStatus": "hand-tuned",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "6f20476f23c67a14696f73e7ec027076608a3039a98b8781ab82964b1668cf51",
+    "digits": 11,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/Chevrolet_Camaro_V8Supercar_2024/background.dds",
+      "assets/Chevrolet_Camaro_V8Supercar_2024/icons.dds",
+      "assets/Toyota_Supra_GT4/font.dds"
+    ]
+  },
+  {
+    "vehicleId": "TA2_Dodge_Challenger_2024",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/TA2_Dodge_Challenger_2024.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "70dcdc9bb913c4eb0719b019c931e2a2a05a7b93ffd933243a2a82b3c301aa92",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/TA2_Dodge_Challenger_2024/background.dds",
+      "assets/vehicles/TA2_Dodge_Challenger_2024/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "TA2_Ford_Mustang_2024",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/TA2_Ford_Mustang_2024.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "735e3f8cab68ade5bd5302bb4be686e82a771d1285658c9aea3507631834bdcc",
+    "digits": 12,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/background.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs1.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs2.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs3.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs4.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs5.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs6.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs7.dds",
+      "assets/vehicles/TA2_Ford_Mustang_2024/gauge-revs8.dds"
+    ]
+  },
+  {
+    "vehicleId": "Ford_Mustang_V8Supercar_2024",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Ford_Mustang_V8Supercar_2024.lua",
+    "layoutStatus": "hand-tuned",
+    "captureMethod": "live-motec-and-artwork",
+    "calibrationStatus": "hand-tuned",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "0ebe1ba3fa9aafd7766618318199826a286660bb57991ebf9a35b14a25e107ed",
+    "digits": 11,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/Ford_Mustang_V8Supercar_2024/background.dds",
+      "assets/Ford_Mustang_V8Supercar_2024/icons.dds",
+      "assets/Toyota_Supra_GT4/font.dds"
+    ]
+  },
+  {
+    "vehicleId": "Ford_Mustang_Boss_302_Trans_Am_1970",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Plymouth_Barracuda_Trans_Am_1970",
+    "package": "V8PowerPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Audi_R18_etron_LMP1_2016",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "BMW_March_GTP_1986",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C4_GTP_1986",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Ford_Probe_GTP_1986",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Jaguar_XJR9_IMSA_GTP_1988",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Nissan_GTP_ZX_Turbo_1988",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Olivera_13_LMP2_2013",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Olivera_26_LMP2_2026",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Porsche_919_LMP1_2016",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Porsche_962_GTP_1988",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Toyota_TS050_LMP1_2016",
+    "package": "WorldEndurancePack",
+    "active": false,
+    "status": "inactive"
+  },
+  {
+    "vehicleId": "Ford_Falcon_FG_V8Supercar_2013",
+    "package": "fordfalcon",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Ford_Falcon_FG_V8Supercar_2013.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "254ad777ca28931b67ead207d6394b25ff00f2d818f0f9891870752527af8f2b",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/vehicles/Ford_Falcon_FG_V8Supercar_2013/background.dds",
+      "assets/vehicles/Ford_Falcon_FG_V8Supercar_2013/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Holden_Commodore_VF_V8Supercar_2013",
+    "package": "fordfalcon",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Holden_Commodore_VF_V8Supercar_2013.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "ddae25a8495a605039957f3525c69329fca04006fabfedaac54324ef07223503",
+    "digits": 9,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/vehicles/Holden_Commodore_VF_V8Supercar_2013/background.dds",
+      "assets/vehicles/Holden_Commodore_VF_V8Supercar_2013/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_320_Turbo_Group5",
+    "package": "group5RevivalPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Ford_Zakspeed_Capri_Group5",
+    "package": "group5RevivalPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Nissan_280ZX_IMSA",
+    "package": "group5RevivalPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Nissan_Skyline_KDR30",
+    "package": "group5RevivalPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Porsche_935_80",
+    "package": "group5RevivalPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Chaparral_2F_1967",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C3_1973",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_Grand_Sport_1963",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Ford_Capri_RS3100_1973",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Ford_GT40_MkIV_1967",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Jaguar_E-Type_Lightweight_1964",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Lola_T70_MK3_67",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Porsche_911_RSR_1974",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Shelby_Daytona_Coupe_1964",
+    "package": "gtLegendsPack",
+    "active": true,
+    "status": "excluded-analogue"
+  },
+  {
+    "vehicleId": "Aston_Martin_Vantage_GTE_2020",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Aston_Martin_Vantage_GTE_2020.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "82a0274f907e0767d23aeff8dd114fc5bbe4c5982858272ff5dd85ff1c8369be",
+    "digits": 13,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GTE_2020/background.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GTE_2020/gauge-revs_blue.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GTE_2020/gauge-revs_green.dds",
+      "assets/vehicles/Aston_Martin_Vantage_GTE_2020/gauge-revs_red.dds"
+    ]
+  },
+  {
+    "vehicleId": "BMW_M8_GTE",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/BMW_M8_GTE.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "045414bba47690aae289bd27ce7c0dd8db8bb16e12f909af3707c98d1b812b83",
+    "digits": 19,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialbold.dds",
+      "assets/vehicles/BMW_M8_GTE/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C7R_GTE",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Corvette_C7R_GTE.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "035257e2f725e53e875e28d46d0596a06932e86dc7d1776bbddae32799faaebb",
+    "digits": 15,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Chevrolet_Corvette_C7R_GTE/background.dds",
+      "assets/vehicles/Chevrolet_Corvette_C7R_GTE/gauge-battv.dds"
+    ]
+  },
+  {
+    "vehicleId": "Chevrolet_Corvette_C8R_GTE_2020",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Chevrolet_Corvette_C8R_GTE_2020.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "e13ac8a94ce2437cd3f6c698fb8b7324937f7113942696914cd404f07276d99c",
+    "digits": 23,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/DDU9.dds",
+      "assets/vehicles/Chevrolet_Corvette_C8R_GTE_2020/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Dodge_SRT_Viper_GTS-R",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Dodge_SRT_Viper_GTS-R.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "77bbc26db5bdd764c1ee6bb9f712563584c0c6c85d72338078e4fe8ae5e64742",
+    "digits": 6,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Dodge_SRT_Viper_GTS-R/background.dds",
+      "assets/vehicles/Dodge_SRT_Viper_GTS-R/gauge-revs.dds"
+    ]
+  },
+  {
+    "vehicleId": "Ford_GTLM_GTE_2022",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Ford_GTLM_GTE_2022.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "2e4997f38910545fa89911ab3c94c2639bc832949ebde1e05b5712564594a033",
+    "digits": 14,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/GENERIC.dds",
+      "assets/vehicles/Ford_GTLM_GTE_2022/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Porsche_911_RSR_GTE_2020",
+    "package": "gteDecadePack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Porsche_911_RSR_GTE_2020.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "bebf535f4fb4a93a2ca0b46e30242cfdc4b7d5c992690c054273b1934f9a5574",
+    "digits": 20,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/arialreg.dds",
+      "assets/vehicles/Porsche_911_RSR_GTE_2020/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Honda_Civic_Type-R_GT500",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Honda_Civic_Type-R_GT500.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "9dad2b4a9c48520f06c6d9edc07f1900e3246d1d2ea6b80fa7ba242087853cd3",
+    "digits": 22,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Honda_Civic_Type-R_GT500/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Honda_NSX_GT500_2023",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Honda_NSX_GT500_2023.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "16438b0a8202ebbe14bd7d392c26c70e2293545cfa8fd55827e2619e0c19c0e9",
+    "digits": 22,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Honda_NSX_GT500_2023/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Honda_NSX_JGTC_2003",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Honda_NSX_JGTC_2003.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "24b94b1737a9d2b93569471d79dea79187af661192d120e1cfe87ea3535c4904",
+    "digits": 12,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Honda_NSX_JGTC_2003/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_Z_GT500",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_Z_GT500.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "13225d70660b4fafda9d37cd9166aed195525dbf22583c2effbccf13949e3045",
+    "digits": 22,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Nissan_Z_GT500/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_350Z_GT500_2004",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_350Z_GT500_2004.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "f5e59f0839675aeabfa8fff12930e04755637b712cca0273e161107a667576ee",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Nissan_350Z_GT500_2004/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_GTR_R35_GT500",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_GTR_R35_GT500.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "3f8da977d079d3eb09d726bb217012d76b19655a78d3237e6457a68d4f0a66ac",
+    "digits": 22,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Nissan_GTR_R35_GT500/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Nissan_GT-R_R34_JGTC_2003",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Nissan_GT-R_R34_JGTC_2003.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "d00bfcb934fbe3420aa474db811152c43b2bb24968597bab32ab3ad9bdb9183f",
+    "digits": 6,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Nissan_GT-R_R34_JGTC_2003/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Toyota_GR_Supra_GT500",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Toyota_GR_Supra_GT500.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "4b09f979bfeafdfd8619503a430ace21ed3de244d588a3dafc5fe99195ab9523",
+    "digits": 22,
+    "auxiliaryDigits": 3,
+    "assets": [
+      "assets/fonts/DDU10.dds",
+      "assets/vehicles/Toyota_GR_Supra_GT500/background.dds"
+    ]
+  },
+  {
+    "vehicleId": "Toyota_Supra_JGTC_2003",
+    "package": "japaneseGT500Pack",
+    "active": true,
+    "status": "profile",
+    "profile": "profiles/Toyota_Supra_JGTC_2003.lua",
+    "layoutStatus": "asset-calibrated-unverified",
+    "captureMethod": "mounted-bounds-and-artwork",
+    "calibrationStatus": "preview-calibrated",
+    "validationStatus": "pending-runtime-audit",
+    "sceneAuditStatus": "passed",
+    "auditFindings": [],
+    "auditCurrent": true,
+    "profileSha256": "b3fdf9cb2a6d976cc245b41c718c287e16d518880c379a8fb725c771b85b443f",
+    "digits": 12,
+    "auxiliaryDigits": 0,
+    "assets": [
+      "assets/fonts/marelliItalic.dds",
+      "assets/vehicles/Toyota_Supra_JGTC_2003/background.dds",
+      "assets/vehicles/Toyota_Supra_JGTC_2003/gauge-revs.dds"
+    ]
+  }
+]

@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-10T01:31:42.191391+00:00",
+  "vehicles": {
+    "Acura_ARX-06_2023": {
+      "profileSha256": "6370aef86b79ddfc0627af4d4315325ca9191c5c88bf6511becb5486123386a4",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Alpine_A110_GT4_2020": {
+      "profileSha256": "f57a6ee28638f520271effb13aed3d0f2a49ffac36cc01a0a4c446b6350dcd91",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Alpine_A424_2024": {
+      "profileSha256": "5b7f7dd6b506c62c6ae32d7d567b97efa93a9741d60ab210821f181015a47c2a",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Aston_Martin_DBR9_2005": {
+      "profileSha256": "fea36ca2d1df658a3da963ba6b65451bb9113db3b9d728275df3f6f33d064806",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Aston_Martin_Valkyrie_LMH_2025": {
+      "profileSha256": "d7e8f1c3d822c5b839662453b8df7453991c38281284fd5becf98366016f040c",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Aston_Martin_Vantage_AMR_GT4": {
+      "profileSha256": "e493cf6935db5bb03e904e23127badf12c96126f7371e1417f0aa1b79047256a",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Aston_Martin_Vantage_GT3": {
+      "profileSha256": "281029ad16c4adfc0ca8a2dd2658fec7b9f8d223a9bf62b22d4aa84ca1b208d8",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Aston_Martin_Vantage_GT3_Evo": {
+      "profileSha256": "6f4ce1d70e2b114b87c838b0c840e2195c0a9a996f76b05f061977276b162f91",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Aston_Martin_Vantage_GTE_2020": {
+      "profileSha256": "82a0274f907e0767d23aeff8dd114fc5bbe4c5982858272ff5dd85ff1c8369be",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Audi_R8_LMP900_2002": {
+      "profileSha256": "3e3bdde5ce029aa17d7f5dd88cf1740dca30c3197883d12811e5f27844f7fed8",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Audi_R8_LMS_GT3_EVO": {
+      "profileSha256": "bc89868ba8f700e64c177471ccd6e72c86ff3354742746f5005edb794200c51e",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "runtime-audited",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1,
+      "liveWidgetCount": 54
+    },
+    "Audi_R8_LMS_GT4_EVO": {
+      "profileSha256": "0ad24d045ad42824143fe0ee5898a6263bb6433260259c9c24cef7469d5fff3c",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "BMW_M3_E46_GTR": {
+      "profileSha256": "bf052a5d24ed011e2a722145938dcefa2003732975b50606284941fd1c00f67f",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "BMW_M4_GT3": {
+      "profileSha256": "c562ae9032d509f73ba8773f64bb8c154d01fd59630eae4ccb5583579f1091a3",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "BMW_M4_GT4": {
+      "profileSha256": "03232898bec32fce17448e5211f94a075ffba96132d40920c6da61e4cc7a6cd0",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "BMW_M8_GTE": {
+      "profileSha256": "045414bba47690aae289bd27ce7c0dd8db8bb16e12f909af3707c98d1b812b83",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "BMW_M_Hybrid_V8": {
+      "profileSha256": "43d924e4268f93573bedded3c772db08c655818011723451e488303d13d5288c",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "BMW_V12_LMR": {
+      "profileSha256": "fd952366a782a4399bcb9e78aae77d9ea940ed92f2a1d7ee9744f158eabde389",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Cadillac_Northstar_LMP900": {
+      "profileSha256": "8ee9a840378649f9771675ec1dd24db8ccbf0f34f336557ca895d3a233c93d60",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Cadillac_V_SeriesR": {
+      "profileSha256": "81cbf461558a44c561994bebf506d2bfa68aa0d2a1a831c198e010446924ceb4",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Chevrolet_Camaro_V8Supercar_2024": {
+      "profileSha256": "6f20476f23c67a14696f73e7ec027076608a3039a98b8781ab82964b1668cf51",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Chevrolet_Camaro_ZL-1_GT4_2017": {
+      "profileSha256": "65993bb5037b1a9bf51caea463fb8ba87aa2113087f250c4e73ba7cd56c125a7",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Chevrolet_Corvette_C5R": {
+      "profileSha256": "9386f37e998b3edc14ced9d967de31cc95ec7a5732464bf0cf1243550cbe10e0",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Chevrolet_Corvette_C6R": {
+      "profileSha256": "ff928d1fee796d221c3e15fedff97794e805a991bd4081108cbf8ff35db85a60",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Chevrolet_Corvette_C7R_GTE": {
+      "profileSha256": "035257e2f725e53e875e28d46d0596a06932e86dc7d1776bbddae32799faaebb",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Chevrolet_Corvette_C8R_GTE_2020": {
+      "profileSha256": "e13ac8a94ce2437cd3f6c698fb8b7324937f7113942696914cd404f07276d99c",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Chevrolet_Corvette_Z06_GT3_2024": {
+      "profileSha256": "2622cbf102047f693d79f171107f40b96f806b1e3edb0ec733e0f2611efbc08b",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Chrysler_Viper_GTS-R": {
+      "profileSha256": "1e016f60edb9970e783eaa19b9125e7d04a8eab636004223da1a8be73e8e90b0",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Dodge_SRT_Viper_GTS-R": {
+      "profileSha256": "77bbc26db5bdd764c1ee6bb9f712563584c0c6c85d72338078e4fe8ae5e64742",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Dodge_Viper_CC": {
+      "profileSha256": "d6ae215dc010952d73a371a390aed3b13b32fd32fb76c415297bd5c86b331ab0",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Ford_Falcon_FG_V8Supercar_2013": {
+      "profileSha256": "254ad777ca28931b67ead207d6394b25ff00f2d818f0f9891870752527af8f2b",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Ford_GTLM_GTE_2022": {
+      "profileSha256": "2e4997f38910545fa89911ab3c94c2639bc832949ebde1e05b5712564594a033",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Ford_Mustang_GT3_2023": {
+      "profileSha256": "023f4c87fee405dafd03e520ae5cb576e75ed37880379baabd49c548d6d3b222",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Ford_Mustang_GT4_2024": {
+      "profileSha256": "06a7cfa16713e2c76a28bbcf1fbab09cdaf72f9a0614b95ce783fba3aa7edfc4",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Ford_Mustang_V8Supercar_2024": {
+      "profileSha256": "0ebe1ba3fa9aafd7766618318199826a286660bb57991ebf9a35b14a25e107ed",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Gillet_Vertigo_2004": {
+      "profileSha256": "5d5689c712cd0ceddbb19d0fe28a8f41d87c49184161f33e763dcfb0d1b9eea3",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Holden_Commodore_VF_V8Supercar_2013": {
+      "profileSha256": "ddae25a8495a605039957f3525c69329fca04006fabfedaac54324ef07223503",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Honda_Civic_Type-R_GT500": {
+      "profileSha256": "9dad2b4a9c48520f06c6d9edc07f1900e3246d1d2ea6b80fa7ba242087853cd3",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Honda_NSX_GT3": {
+      "profileSha256": "b76bbd7ac43fbe10017f754ead363c1016513ddee03b4470482529ef389545ab",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Honda_NSX_GT500_2023": {
+      "profileSha256": "16438b0a8202ebbe14bd7d392c26c70e2293545cfa8fd55827e2619e0c19c0e9",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Honda_NSX_JGTC_2003": {
+      "profileSha256": "24b94b1737a9d2b93569471d79dea79187af661192d120e1cfe87ea3535c4904",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Lamborghini_Huracan_GT3_Evo_2022": {
+      "profileSha256": "32773e950dc8904092eceb65552f91e24c8f3bcb3dadab2cd280375e61fc8ecd",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Lamborghini_Murcielago_R-GT_2004": {
+      "profileSha256": "57a0e64c6f5a5a0ee4f5b6676146589bf0e7a18dbaac67614003ea5e9cd3dd0f",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 3
+    },
+    "Lamborghini_SC63_LMDh_2024": {
+      "profileSha256": "deb0b3cec7971fb6832ab205c7f45b15d78029033f7faab8288632f93e309c29",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Lister_storm_gt": {
+      "profileSha256": "958fa18f0bcb738e5c8205312e014b2476feb5cc862d919d05efba4dc404017b",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Lotus_Elise_GT1_1997": {
+      "profileSha256": "8da7ce68ea5d4fb4083889cffa5f0a994e8ce4fec95b1adf4c7b3f31b429b1ef",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Marcos_Mantara_LM600_GT2_2004": {
+      "profileSha256": "2007c55b049209eef2aa809f34e2cfeb28d650c1d702fa8379fbdb893646b86e",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Maserati_MC12_GT1": {
+      "profileSha256": "58da2c0bb4088dbff8b2ed7c514e75f711b93514364ebda66212d1c06aa88fdf",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Mazda_787B_1991": {
+      "profileSha256": "56b91f35859b261b49e2ff6abfd21e4ad67ce86f7986099d1817be1cdf1b860b",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Mazda_MX-5_Cup_2017": {
+      "profileSha256": "6be6881cb67874acce325bab38fe1da39c9a6077492582d8e7eb04f6c9ccba20",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Mercedes_AMG_GT3_Evo_2020": {
+      "profileSha256": "a94111f0f9042e61afb541bb8216f21bf92fedc5f29dfeaf191147678f64fd4f",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Mercedes_AMG_GT4": {
+      "profileSha256": "cf45b3336c48175fb42d9b0126b008d5e9615643840dfce49a5131787ae6fa95",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Mercedes_CLK-LM_1998": {
+      "profileSha256": "0a63b644176813d1b668a81e7db29e9aca3c9dc0ed9ab9388ec1f622765db3c3",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Morgan_Aero_8_GTN": {
+      "profileSha256": "7801d4b6dd1cfec8c37c97eeca97ebe051a814b0f54f8986c7c4b6619b52db14",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Mosler_MT900R_2004": {
+      "profileSha256": "16d3338e0ab7806350f8cd7a1a41710304c23d8bf3cb6c6cbe8603f96f7b7f31",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Nissan_350Z_GT500_2004": {
+      "profileSha256": "f5e59f0839675aeabfa8fff12930e04755637b712cca0273e161107a667576ee",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Nissan_GT-R_R34_JGTC_2003": {
+      "profileSha256": "d00bfcb934fbe3420aa474db811152c43b2bb24968597bab32ab3ad9bdb9183f",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Nissan_GTR_R35_GT500": {
+      "profileSha256": "3f8da977d079d3eb09d726bb217012d76b19655a78d3237e6457a68d4f0a66ac",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Nissan_R390_GT1": {
+      "profileSha256": "a8e78e1254ce9460e2aeef639a94a6bc10aa148027697a42303f8ca81ad87ff8",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Nissan_Z_GT4_2023": {
+      "profileSha256": "b43133bd180e6a5bf3bb4bec4d72664a103e9a34c55bd60c23373c9888d80fa2",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Nissan_Z_GT500": {
+      "profileSha256": "13225d70660b4fafda9d37cd9166aed195525dbf22583c2effbccf13949e3045",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Panoz_Esperante_GTR1": {
+      "profileSha256": "369fd97d798523ed1b25eccaeb8d2389000a2de0f70cb691ce8892547274ef85",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Panoz_LMP1_Roadster_S_99": {
+      "profileSha256": "5061f0a589b3ab7c7b4e3f0bb905ad527a156188ec52f1e69a177bb9ce9111b6",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Peugeot_9X8_2024": {
+      "profileSha256": "5ce7fb3588dd0cb061aa5b4ff864a5f25fbf757f242fb919d8486219a339f986",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Porsche_911_GT1_98": {
+      "profileSha256": "8cea849f8397b74efca3e8662ed0077d26c7d2fe1dd11afaf51fa235a9d94c8e",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Porsche_911_GT3-RSR_2004": {
+      "profileSha256": "c6d8b58e7c4889e6c10c363c5ed30fe224ba28ee95c916db22e324e43b587ccd",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Porsche_911_GT3_Cup_2022": {
+      "profileSha256": "bd33420af54d2f228cf678c7dcbedce2632d105c4b38057cb83c532a704bd949",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Porsche_911_RSR_GTE_2020": {
+      "profileSha256": "bebf535f4fb4a93a2ca0b46e30242cfdc4b7d5c992690c054273b1934f9a5574",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 3
+    },
+    "Porsche_963": {
+      "profileSha256": "ba3ba96ce3a72107dfb2824468e0f5df7c451d1cfdb6fbef570adf549eb6156a",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Porsche_992_GT3R": {
+      "profileSha256": "924a58ce3f575a0530ed7d3a1c4ab41a813345ba55956c90573a6ba9f0b06150",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Porsche_Cayman_GT4_Clubsport_2022": {
+      "profileSha256": "8c615f85cc2f8bbb219c82e401fdfb8bb5598e0b4effca785fdcabd044445b42",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Saleen_S7R": {
+      "profileSha256": "1fdecc50e8ec539d8aa0b092ff844e55eb4cc5529629fc5d82bccd7cc30f4bab",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "TA2_Chevrolet_Camaro_2024": {
+      "profileSha256": "301f7e75ea7d526f076437fec115499d463ba6435d4351370f2f688c05f5804e",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "TA2_Dodge_Challenger_2024": {
+      "profileSha256": "70dcdc9bb913c4eb0719b019c931e2a2a05a7b93ffd933243a2a82b3c301aa92",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "TA2_Ford_Mustang_2024": {
+      "profileSha256": "735e3f8cab68ade5bd5302bb4be686e82a771d1285658c9aea3507631834bdcc",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "TVR_Tuscan_T400R_2002": {
+      "profileSha256": "0f765134eab10b974a83e502e09b0f897096dd3f0af7e9fd216c1b4272a455e4",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Toyota_GR010": {
+      "profileSha256": "78f6a24b15ceb3c70fb108c9f9b17b5e3383071377bc380c31b83c7996d51889",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 2
+    },
+    "Toyota_GR_Supra_GT500": {
+      "profileSha256": "4b09f979bfeafdfd8619503a430ace21ed3de244d588a3dafc5fe99195ab9523",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Toyota_GT-One_TS020": {
+      "profileSha256": "4c1ca63922f781dddb7f3116d2ad7b8781ee9a905854556f0eff300b03cd409d",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Toyota_Supra_GT4": {
+      "profileSha256": "06ac03bd8d58177eb4cfa13e30e4f97b281561f1df6660f599b7245786f042fb",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    },
+    "Toyota_Supra_JGTC_2003": {
+      "profileSha256": "b3fdf9cb2a6d976cc245b41c718c287e16d518880c379a8fb725c771b85b443f",
+      "sceneAuditStatus": "passed",
+      "validationStatus": "pending-runtime-audit",
+      "findings": [],
+      "notes": [],
+      "sceneFindings": [],
+      "scenesInspected": 1
+    }
+  }
+}

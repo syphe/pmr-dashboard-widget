@@ -73,6 +73,9 @@ function mod.refresh(dt)
     for _,indicator in ipairs(profile.indicators or {}) do
         values['indicator_'..indicator.id]=mod.readNumber(actor,{param=indicator.param,boolean=true})
     end
+    for _,control in ipairs(profile.paletteControls or {}) do
+        values['palette_'..control.id]=mod.readNumber(actor,control)
+    end
     -- Re-read the live actor, independent of its active Motec page/popups.
     local max,start,shift
     if type(actor.getShiftLightsRange)=='function' then
@@ -88,7 +91,7 @@ function mod.refresh(dt)
     if not values.bestValid then
         values.delta=nil
         for _,field in ipairs(profile.fields) do
-            if field.param=='lapDelta' then values[field.id]=nil end
+            if field.param=='lapDelta' then values[field.id]=field.noBestLapValue end
         end
         for _,gauge in ipairs(profile.gauges) do
             if gauge.param=='lapDelta' then values['gauge_'..gauge.id]=nil end
@@ -161,11 +164,21 @@ function mod.drawText(profile,bounds,field,text,color)
         total=total+height*glyph.width/glyph.height*widthScale+advance
     end
     total=math.max(0,total-advance)
+    local box=field.textBounds
+    if box then
+        local factor=math.min(1,box.width/math.max(total,.000001),box.height/height)
+        height=height*factor;total=total*factor;advance=advance*factor
+    end
     local x=field.x+(field.dx or 0)
-    if field.align=='right' then x=x-total elseif field.align~='left' then x=x-total/2 end
+    local align=field.boxAlign or field.align
+    if box and field.boxAlign=='center' then x=box.x+box.width/2 end
+    if align=='right' then x=x-total elseif align~='left' then x=x-total/2 end
     local y=field.y+(field.dy or 0)-height/2
     local crop=meta.crop
-    if profile.clampText then x=math.max(crop.x,math.min(x,crop.x+crop.width-total)) end
+    if box then
+        x=math.max(box.x,math.min(x,box.x+box.width-total))
+        y=math.max(box.y,math.min(y,box.y+box.height-height))
+    elseif profile.clampText then x=math.max(crop.x,math.min(x,crop.x+crop.width-total)) end
     local sx,sy=bounds.width/profile.width,bounds.height/profile.height
     for i=1,#text do
         local glyph=font.glyphs[text:sub(i,i)] or font.glyphs['-']
@@ -187,6 +200,23 @@ function mod.drawDashboard(bounds,profile,values)
     local background=getOverlay(profile,meta.background.file)
     uvs(background,0,0,meta.crop.width,meta.crop.height,meta.background.width,meta.background.height)
     renderImage(background,bounds.left,bounds.bottom,bounds.width,screenHeight)
+    local palette=meta.palette
+    if palette then
+        for _,control in ipairs(profile.paletteControls or {}) do
+            local region=palette.regions[control.id]
+            local value=values['palette_'..control.id]
+            local color=control.color
+            if finite(value) then
+                if control.high and value>control.high then color=control.highColor end
+                if control.low and value<control.low then color=control.lowColor end
+            end
+            local overlay=getOverlay(profile,palette.file)
+            uvs(overlay,region.sourceX,region.sourceY,region.width,region.height,palette.width,palette.height)
+            renderImage(overlay,bounds.left+(region.x-meta.crop.x)*sx,
+                bounds.bottom+(meta.crop.height-(region.y-meta.crop.y)-region.height)*sy,
+                region.width*sx,region.height*sy,color)
+        end
+    end
     for _,gauge in ipairs(profile.gauges) do
         local value=values['gauge_'..gauge.id]
         local asset=meta.gauges[gauge.id]

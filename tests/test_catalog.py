@@ -18,7 +18,9 @@ source_by_id={r['id']:r for r in rows}
 excluded=[{'id':id,'profile':'profiles/'+id+'.lua'} for id in json.loads((ROOT/'catalog/exclusions.json').read_text())]
 profile_count=len(list((ROOT/'profiles').glob('*.lua')))
 assert len(mod.profiles)==profile_count
-assert len(excluded)==15
+from profile_coverage import audit
+coverage=audit()
+assert sum(r['active'] for r in coverage)==sum(r['active'] and r['status'] in {'profile','excluded-analogue'} for r in coverage)
 by_id={p.id:p for _,p in mod.profiles.items()}
 enabled=[{'id':id} for id in by_id]
 assert {p.stem for p in (ROOT/'profiles').glob('*.lua')}==set(by_id)

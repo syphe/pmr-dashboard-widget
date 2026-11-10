@@ -653,7 +653,7 @@
     "capturedDefinitionFiles": 7,
     "dashboardDependencyFiles": 33,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Mazda_MX-5_Cup_2017",
@@ -1133,7 +1133,7 @@
     "capturedDefinitionFiles": 7,
     "dashboardDependencyFiles": 22,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "AMC_Javelin_Trans_Am_1971",
@@ -1181,7 +1181,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 27,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Chevrolet_Camaro_V8Supercar_2024",
@@ -1213,7 +1213,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 21,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "TA2_Ford_Mustang_2024",
@@ -1229,7 +1229,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 17,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Ford_Mustang_V8Supercar_2024",
@@ -1469,7 +1469,7 @@
     "capturedDefinitionFiles": 9,
     "dashboardDependencyFiles": 19,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Holden_Commodore_VF_V8Supercar_2013",
@@ -1485,7 +1485,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 19,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "BMW_320_Turbo_Group5",
@@ -1725,7 +1725,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 26,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "BMW_M8_GTE",
@@ -1741,7 +1741,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 28,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Chevrolet_Corvette_C7R_GTE",
@@ -1757,7 +1757,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 26,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Chevrolet_Corvette_C8R_GTE_2020",
@@ -1773,7 +1773,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 20,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Dodge_SRT_Viper_GTS-R",
@@ -1789,7 +1789,7 @@
     "capturedDefinitionFiles": 10,
     "dashboardDependencyFiles": 22,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Ford_GTLM_GTE_2022",
@@ -1805,7 +1805,7 @@
     "capturedDefinitionFiles": 10,
     "dashboardDependencyFiles": 19,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Porsche_911_RSR_GTE_2020",
@@ -1821,7 +1821,7 @@
     "capturedDefinitionFiles": 11,
     "dashboardDependencyFiles": 30,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Honda_Civic_Type-R_GT500",
@@ -1837,7 +1837,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 21,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Honda_NSX_GT500_2023",
@@ -1853,7 +1853,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 21,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Honda_NSX_JGTC_2003",
@@ -1869,7 +1869,7 @@
     "capturedDefinitionFiles": 10,
     "dashboardDependencyFiles": 23,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Nissan_Z_GT500",
@@ -1885,7 +1885,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 24,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Nissan_350Z_GT500_2004",
@@ -1901,7 +1901,7 @@
     "capturedDefinitionFiles": 10,
     "dashboardDependencyFiles": 20,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Nissan_GTR_R35_GT500",
@@ -1917,7 +1917,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 23,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Nissan_GT-R_R34_JGTC_2003",
@@ -1933,7 +1933,7 @@
     "capturedDefinitionFiles": 9,
     "dashboardDependencyFiles": 15,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Toyota_GR_Supra_GT500",
@@ -1949,7 +1949,7 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 24,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   },
   {
     "vehicleId": "Toyota_Supra_JGTC_2003",
@@ -1965,6 +1965,6 @@
     "capturedDefinitionFiles": 8,
     "dashboardDependencyFiles": 22,
     "hasMotec": true,
-    "bundledProfile": false
+    "bundledProfile": true
   }
 ]

@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / '.tools/python'))
 from PIL import Image, ImageDraw
 from dash_geometry import load_nodes, layout
+from dash_bounds import layout_bounds
 from dash_material import compose
 from dash_gauges import fill_atlases
 from dds import save_dds
@@ -148,7 +149,7 @@ class Importer:
         elif p=='speed':
             f={'method':'getForwardSpeedKPH','absolute':True}
             if widget.get('unitOverride')=='mph': f['scale']=1/1.609344
-        elif p and p.endswith('tyre_pressure'): f['scale']=.00001
+        elif p and (p.endswith('tyre_pressure') or p in ('fuel_pressure','oil_pressure')): f['scale']=.00001
         if p=='gear': f['kind']='gear'
         if widget.get('zeroNeutral')=='true':f['zeroNeutral']=True
         fmt=widget.get('format','')
@@ -186,9 +187,28 @@ class Importer:
         scenes=[self.scene(f) for f in sorted((self.data/'vehicles'/vehicle).glob('*.i3d'))
                 if not any(t in f.stem.lower() for t in ('_col','_lod'))]
         main_scene=None; bg_node=None
-        for s in scenes:
-            if palette in s['nodes']:
-                main_scene=s;bg_node=s['nodes'][palette][0][0];break
+        palette_scenes=[s for s in scenes if palette in s['nodes']]
+        if palette_scenes:
+            # A car may ship a detached/dummy copy of the same screen palette.
+            # Prefer the copy carrying the selected page's actual digit nodes.
+            main_scene=max(palette_scenes,key=lambda s:sum(w.get('bindingId') in s['nodes'] for w in widgets if w['type']=='digits'))
+            bg_node=main_scene['nodes'][palette][0][0]
+        if bg_node is None:
+            # Some fixed-layout displays bind the background on TopPage instead
+            # of declaring a per-page palette (e.g. the R34 and 350Z GT500).
+            candidates=[]
+            for s in scenes:
+                score=sum(w.get('bindingId') in s['nodes'] for w in widgets if w['type']=='digits')
+                for w in widgets:
+                    if w['type']!='backlight' or w.get('bindingId') not in s['nodes']:continue
+                    node=s['nodes'][w['bindingId']][0][0]
+                    for mid in node.get('materialIds','').split():
+                        material=s['materials'].get(mid)
+                        if material is not None and any(c.get('name')=='backgroundMap' for c in material):
+                            candidates.append((score,s,node))
+            if candidates:
+                _,main_scene,bg_node=max(candidates,key=lambda v:v[0])
+                palette=bg_node.get('name')
         if main_scene is None:
             main_scene=max(scenes,key=lambda s:sum(w.get('bindingId') in s['nodes'] for w in widgets))
         used_scenes={main_scene['path']}; textures={}; missing=[]
@@ -228,7 +248,7 @@ class Importer:
                 field.pop('constant',None);field['param']=visibility[w['bindingId']]
             field.update(id=w.get('name',str(ix)),bindingId=w.get('bindingId'),
                          color=[float(w.get(c,defaults.get(c,.8))) for c in ('r','g','b')]+[1],
-                         align=w.get('align','center'),font=w.get('font',defaults.get('font','GENERIC')))
+                         align=w.get('align','right'),font=w.get('font',defaults.get('font','GENERIC')))
             for prefix,key in [('h','highColor'),('l','lowColor')]:
                 if any(c+prefix in w for c in 'rgb'):
                     field[key]=[float(w.get(c+prefix,w.get(c,1))) for c in 'rgb']+[1]
@@ -302,10 +322,14 @@ class Importer:
         if palette and geometry_file.exists():
             try:
                 crop,geometry_report,surface=layout(fields,source_nodes,main_scene['path'].name,palette,load_nodes(geometry_file),width,height)
-                cropped=im.crop((crop['x'],crop['y'],crop['x']+crop['width'],crop['y']+crop['height']))
-                im=Image.new('RGBA',(width,height));im.paste(cropped,(0,0))
             except (KeyError,ValueError) as ex:
                 geometry_report={'error':str(ex)}
+        bounds_file=ROOT/'inspection/live-catalog/bounds'/geometry_file.name
+        if palette and bounds_file.exists() and (not geometry_report or 'error' in geometry_report):
+            crop,geometry_report=layout_bounds(fields,source_nodes,main_scene['path'].name,palette,load_nodes(bounds_file),width,height,self.calibrations.get(vehicle,{}).get('screen',{}))
+        if geometry_report and 'error' not in geometry_report:
+            cropped=im.crop((crop['x'],crop['y'],crop['x']+crop['width'],crop['y']+crop['height']))
+            im=Image.new('RGBA',(width,height));im.paste(cropped,(0,0))
         save_dds(im,dest/'background.dds')
         auxiliary=[]
         if geometry_report and 'error' not in geometry_report:
@@ -315,7 +339,7 @@ class Importer:
         for f in fields+auxiliary: self.font(f['font'])
         profile={'id':vehicle,'name':vehicle.replace('_',' '),'rootNames':[root_name],
             'width':crop['width'],'height':crop['height']+40,'topPadding':40,'assetDirectory':assets_dir,
-            'fontDirectory':'','deltaBar':False,'layoutStatus':'geometry-unverified' if geometry_report and 'error' not in geometry_report else 'draft-projection',
+            'fontDirectory':'','deltaBar':False,'layoutStatus':('bounds-unverified' if geometry_report.get('method')=='mounted-bounding-sphere' else 'geometry-unverified') if geometry_report and 'error' not in geometry_report else 'draft-projection',
             'fields':fields,'auxiliaryFields':auxiliary,'clampText':True,
             'gauges':gauges,'shiftLights':self.lights(widgets,crop['width']),
             'assets':{'crop':crop,
@@ -323,7 +347,7 @@ class Importer:
         # Use original fields for the tuned Supra, retain this complete extraction.
         manifest={'id':vehicle,'actor':str(actor_file.relative_to(self.game)).replace('\\','/'),
             'rootNames':[root_name],'mainPage':main.get('name') if main is not None else 'topPage',
-            'defaults':defaults,'pageDefaults':dict(pd.attrib) if pd is not None else {},
+            'defaults':defaults,'pageDefaults':dict(pd.attrib, paletteBindingId=palette) if pd is not None else {'paletteBindingId':palette},
             'widgets':widgets,'nodes':source_nodes,'textures':list(textures.values()),
             'background':str(background.relative_to(self.game)).replace('\\','/') if background else None,
             'scenes':[f.name for f in sorted(used_scenes)],'unresolvedBindings':missing,

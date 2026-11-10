@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-DIGITAL_ONLY={'Chevrolet_Corvette_C5R','Mazda_MX-5_Cup_2017'}
+DIGITAL_ONLY={'Chevrolet_Corvette_C5R','Mazda_MX-5_Cup_2017','TA2_Chevrolet_Camaro_2024'}
 
 
 def exclusion_reason(row):
