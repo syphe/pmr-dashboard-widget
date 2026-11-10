@@ -73,7 +73,7 @@ Capture method and runtime validation are listed separately. See [RUNTIME_AUDIT.
 | `Porsche_Carrera_Cup_1990` | Base game | Yes | excluded-analogue |  |  |
 | [Porsche_911_GT1_98](../profiles/Porsche_911_GT1_98.lua) | Base game | Yes | profile | generated | pending-runtime-audit |
 | [Porsche_911_GT3_Cup_2022](../profiles/Porsche_911_GT3_Cup_2022.lua) | Base game | Yes | profile | generated | pending-runtime-audit |
-| [Porsche_992_GT3R](../profiles/Porsche_992_GT3R.lua) | Base game | Yes | profile | generated | pending-runtime-audit |
+| [Porsche_992_GT3R](../profiles/Porsche_992_GT3R.lua) | Base game | Yes | profile | preview-calibrated | runtime-audited |
 | [Porsche_911_GT3-RSR_2004](../profiles/Porsche_911_GT3-RSR_2004.lua) | Base game | Yes | profile | generated | pending-runtime-audit |
 | `Porsche_917K_1970` | Base game | Yes | excluded-analogue |  |  |
 | `Porsche_962C_88` | Base game | Yes | excluded-analogue |  |  |
@@ -86,7 +86,7 @@ Capture method and runtime validation are listed separately. See [RUNTIME_AUDIT.
 | `AMC_Javelin_Trans_Am_1971` | V8PowerPack | Yes | excluded-analogue |  |  |
 | `Chevrolet_Camaro_Z28_Trans_Am_1969` | V8PowerPack | Yes | excluded-analogue |  |  |
 | [TA2_Chevrolet_Camaro_2024](../profiles/TA2_Chevrolet_Camaro_2024.lua) | V8PowerPack | Yes | profile | preview-calibrated | pending-runtime-audit |
-| [Chevrolet_Camaro_V8Supercar_2024](../profiles/Chevrolet_Camaro_V8Supercar_2024.lua) | V8PowerPack | Yes | profile | hand-tuned | pending-runtime-audit |
+| [Chevrolet_Camaro_V8Supercar_2024](../profiles/Chevrolet_Camaro_V8Supercar_2024.lua) | V8PowerPack | Yes | profile | hand-tuned | runtime-audit-findings |
 | [TA2_Dodge_Challenger_2024](../profiles/TA2_Dodge_Challenger_2024.lua) | V8PowerPack | Yes | profile | preview-calibrated | pending-runtime-audit |
 | [TA2_Ford_Mustang_2024](../profiles/TA2_Ford_Mustang_2024.lua) | V8PowerPack | Yes | profile | preview-calibrated | pending-runtime-audit |
 | [Ford_Mustang_V8Supercar_2024](../profiles/Ford_Mustang_V8Supercar_2024.lua) | V8PowerPack | Yes | profile | hand-tuned | pending-runtime-audit |
@@ -104,7 +104,7 @@ Capture method and runtime validation are listed separately. See [RUNTIME_AUDIT.
 | `Porsche_962_GTP_1988` | WorldEndurancePack | No | inactive |  |  |
 | `Toyota_TS050_LMP1_2016` | WorldEndurancePack | No | inactive |  |  |
 | [Ford_Falcon_FG_V8Supercar_2013](../profiles/Ford_Falcon_FG_V8Supercar_2013.lua) | fordfalcon | Yes | profile | preview-calibrated | pending-runtime-audit |
-| [Holden_Commodore_VF_V8Supercar_2013](../profiles/Holden_Commodore_VF_V8Supercar_2013.lua) | fordfalcon | Yes | profile | preview-calibrated | pending-runtime-audit |
+| [Holden_Commodore_VF_V8Supercar_2013](../profiles/Holden_Commodore_VF_V8Supercar_2013.lua) | fordfalcon | Yes | profile | preview-calibrated | runtime-audit-findings |
 | `BMW_320_Turbo_Group5` | group5RevivalPack | Yes | excluded-analogue |  |  |
 | `Ford_Zakspeed_Capri_Group5` | group5RevivalPack | Yes | excluded-analogue |  |  |
 | `Nissan_280ZX_IMSA` | group5RevivalPack | Yes | excluded-analogue |  |  |

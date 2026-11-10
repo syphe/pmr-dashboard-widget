@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-10T01:31:42.191391+00:00",
+  "updatedAt": "2026-11-10T02:08:54.135528+00:00",
   "vehicles": {
     "Acura_ARX-06_2023": {
       "profileSha256": "6370aef86b79ddfc0627af4d4315325ca9191c5c88bf6511becb5486123386a4",
@@ -186,11 +186,24 @@
     "Chevrolet_Camaro_V8Supercar_2024": {
       "profileSha256": "6f20476f23c67a14696f73e7ec027076608a3039a98b8781ab82964b1668cf51",
       "sceneAuditStatus": "passed",
-      "validationStatus": "pending-runtime-audit",
-      "findings": [],
-      "notes": [],
+      "validationStatus": "runtime-audit-findings",
+      "findings": [
+        "best: telemetry getter unavailable",
+        "brakeBias: profile alignment differs from live alignment",
+        "engineTemp: profile alignment differs from live alignment",
+        "gear: gear/neutral text differs: profile 'N', native '0'",
+        "map: profile alignment differs from live alignment",
+        "map: profile value '3' differs from native '0'; conversion/units need review"
+      ],
+      "notes": [
+        "best: no valid numeric sample in this session",
+        "brakeBias: formatting differs: profile '0.0', native '0'",
+        "delta: formatting differs: profile '+0.00', native '0'",
+        "position: formatting differs: profile '1', native '0'"
+      ],
       "sceneFindings": [],
-      "scenesInspected": 1
+      "scenesInspected": 1,
+      "liveWidgetCount": 23
     },
     "Chevrolet_Camaro_ZL-1_GT4_2017": {
       "profileSha256": "65993bb5037b1a9bf51caea463fb8ba87aa2113087f250c4e73ba7cd56c125a7",
@@ -330,11 +343,19 @@
     "Holden_Commodore_VF_V8Supercar_2013": {
       "profileSha256": "ddae25a8495a605039957f3525c69329fca04006fabfedaac54324ef07223503",
       "sceneAuditStatus": "passed",
-      "validationStatus": "pending-runtime-audit",
-      "findings": [],
-      "notes": [],
+      "validationStatus": "runtime-audit-findings",
+      "findings": [
+        "gear_digit: gear/neutral text differs: profile 'N', native '0'",
+        "gear_digit: profile alignment differs from live alignment",
+        "laptime_digit: telemetry getter unavailable"
+      ],
+      "notes": [
+        "fuel_digit: formatting differs: profile '0.0', native '0'",
+        "laptime_digit: no valid numeric sample in this session"
+      ],
       "sceneFindings": [],
-      "scenesInspected": 1
+      "scenesInspected": 1,
+      "liveWidgetCount": 18
     },
     "Honda_Civic_Type-R_GT500": {
       "profileSha256": "9dad2b4a9c48520f06c6d9edc07f1900e3246d1d2ea6b80fa7ba242087853cd3",
@@ -625,13 +646,16 @@
       "scenesInspected": 2
     },
     "Porsche_992_GT3R": {
-      "profileSha256": "924a58ce3f575a0530ed7d3a1c4ab41a813345ba55956c90573a6ba9f0b06150",
+      "profileSha256": "e9d15332dffd45667b78011686e7d80659f732d70ca89cad43647dc672687642",
       "sceneAuditStatus": "passed",
-      "validationStatus": "pending-runtime-audit",
+      "validationStatus": "runtime-audited",
       "findings": [],
-      "notes": [],
+      "notes": [
+        "laptime_digit: formatting differs: profile '0:07.92', native '0:07.93'"
+      ],
       "sceneFindings": [],
-      "scenesInspected": 1
+      "scenesInspected": 1,
+      "liveWidgetCount": 44
     },
     "Porsche_Cayman_GT4_Clubsport_2022": {
       "profileSha256": "8c615f85cc2f8bbb219c82e401fdfb8bb5598e0b4effca785fdcabd044445b42",

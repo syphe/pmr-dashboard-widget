@@ -3467,5 +3467,962 @@
         }
       }
     }
+  },
+  "Porsche_992_GT3R": {
+    "layoutStatus": "geometry-calibrated-unverified",
+    "fields": {
+      "gear_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1240,
+        "y": 334.0,
+        "height": 260,
+        "textBounds": {
+          "x": 810,
+          "y": 153,
+          "width": 430,
+          "height": 362
+        },
+        "boxAlign": "center"
+      },
+      "lap_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1564,
+        "y": 85.0,
+        "height": 50,
+        "textBounds": {
+          "x": 1430,
+          "y": 49,
+          "width": 134,
+          "height": 72
+        }
+      },
+      "laptime_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1804,
+        "y": 274.0,
+        "height": 68,
+        "textBounds": {
+          "x": 1252,
+          "y": 205,
+          "width": 552,
+          "height": 138
+        }
+      },
+      "pos_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 2018,
+        "y": 85.0,
+        "height": 50,
+        "textBounds": {
+          "x": 1884,
+          "y": 49,
+          "width": 134,
+          "height": 72
+        }
+      },
+      "abs_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 226,
+        "y": 190.0,
+        "height": 39,
+        "textBounds": {
+          "x": 158,
+          "y": 159,
+          "width": 68,
+          "height": 62
+        }
+      },
+      "dim_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 226,
+        "y": 289.0,
+        "height": 39,
+        "textBounds": {
+          "x": 158,
+          "y": 257,
+          "width": 68,
+          "height": 64
+        }
+      },
+      "ath_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 226,
+        "y": 385.0,
+        "height": 39,
+        "textBounds": {
+          "x": 158,
+          "y": 353,
+          "width": 68,
+          "height": 64
+        }
+      },
+      "mul_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 226,
+        "y": 481.0,
+        "height": 39,
+        "textBounds": {
+          "x": 158,
+          "y": 449,
+          "width": 68,
+          "height": 64
+        }
+      },
+      "brakebias_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1782,
+        "y": 645.0,
+        "height": 34,
+        "textBounds": {
+          "x": 1594,
+          "y": 607,
+          "width": 188,
+          "height": 76
+        }
+      },
+      "race_digits": {
+        "align": "left",
+        "includeInPrimary": true
+      },
+      "qualy_digits": {
+        "align": "left",
+        "includeInPrimary": true
+      },
+      "practice_digits": {
+        "align": "left",
+        "includeInPrimary": true
+      },
+      "predictedLap_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1804,
+        "y": 462.0,
+        "height": 45,
+        "textBounds": {
+          "x": 1540,
+          "y": 411,
+          "width": 264,
+          "height": 102
+        },
+        "noBestLapValue": 0,
+        "positive": false
+      },
+      "delta_digits": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1516,
+        "y": 462.0,
+        "height": 45,
+        "textBounds": {
+          "x": 1258,
+          "y": 411,
+          "width": 258,
+          "height": 102
+        },
+        "noBestLapValue": 0,
+        "format": "%.2f",
+        "deltaColor": false
+      },
+      "speed_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1238,
+        "y": 90.0,
+        "height": 68,
+        "textBounds": {
+          "x": 812,
+          "y": 39,
+          "width": 426,
+          "height": 102
+        }
+      },
+      "oilt_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 790,
+        "y": 196.0,
+        "height": 45,
+        "textBounds": {
+          "x": 540,
+          "y": 157,
+          "width": 250,
+          "height": 78
+        }
+      },
+      "oil_pressure_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 790,
+        "y": 292.0,
+        "height": 45,
+        "textBounds": {
+          "x": 540,
+          "y": 253,
+          "width": 250,
+          "height": 78
+        },
+        "scale": 0.0689475729
+      },
+      "watert_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 790,
+        "y": 388.0,
+        "height": 45,
+        "textBounds": {
+          "x": 540,
+          "y": 349,
+          "width": 250,
+          "height": 78
+        }
+      },
+      "waterp_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 790,
+        "y": 479.0,
+        "height": 45,
+        "textBounds": {
+          "x": 540,
+          "y": 445,
+          "width": 250,
+          "height": 68
+        },
+        "format": "%.1f"
+      },
+      "tyreP_LF_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1016,
+        "y": 643.0,
+        "height": 45,
+        "textBounds": {
+          "x": 834,
+          "y": 597,
+          "width": 182,
+          "height": 92
+        }
+      },
+      "tyreP_RF_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1226,
+        "y": 643.0,
+        "height": 45,
+        "textBounds": {
+          "x": 1044,
+          "y": 597,
+          "width": 182,
+          "height": 92
+        }
+      },
+      "tyreP_LR_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1016,
+        "y": 725.0,
+        "height": 45,
+        "textBounds": {
+          "x": 834,
+          "y": 689,
+          "width": 182,
+          "height": 72
+        }
+      },
+      "tyreP_RR_digit": {
+        "align": "right",
+        "includeInPrimary": true,
+        "x": 1226,
+        "y": 725.0,
+        "height": 45,
+        "textBounds": {
+          "x": 1044,
+          "y": 689,
+          "width": 182,
+          "height": 72
+        }
+      }
+    },
+    "fonts": {
+      "GENERIC": {
+        "file": "assets/vehicles/Porsche_992_GT3R/font-generic-coverage.dds",
+        "width": 8192,
+        "height": 512,
+        "glyphs": {
+          "0": {
+            "x": 38,
+            "y": 0,
+            "width": 147,
+            "height": 256
+          },
+          "1": {
+            "x": 281,
+            "y": 0,
+            "width": 76,
+            "height": 256
+          },
+          "2": {
+            "x": 480,
+            "y": 0,
+            "width": 143,
+            "height": 256
+          },
+          "3": {
+            "x": 708,
+            "y": 0,
+            "width": 136,
+            "height": 256
+          },
+          "4": {
+            "x": 913,
+            "y": 0,
+            "width": 164,
+            "height": 256
+          },
+          "5": {
+            "x": 1150,
+            "y": 0,
+            "width": 135,
+            "height": 256
+          },
+          "6": {
+            "x": 1366,
+            "y": 0,
+            "width": 149,
+            "height": 256
+          },
+          "7": {
+            "x": 1593,
+            "y": 0,
+            "width": 141,
+            "height": 256
+          },
+          "8": {
+            "x": 1811,
+            "y": 0,
+            "width": 147,
+            "height": 256
+          },
+          "9": {
+            "x": 2032,
+            "y": 0,
+            "width": 146,
+            "height": 256
+          },
+          "-": {
+            "x": 2254,
+            "y": 0,
+            "width": 114,
+            "height": 256
+          },
+          "A": {
+            "x": 2451,
+            "y": 0,
+            "width": 188,
+            "height": 256
+          },
+          "B": {
+            "x": 2702,
+            "y": 0,
+            "width": 141,
+            "height": 256
+          },
+          "C": {
+            "x": 2905,
+            "y": 0,
+            "width": 165,
+            "height": 256
+          },
+          "D": {
+            "x": 3124,
+            "y": 0,
+            "width": 182,
+            "height": 256
+          },
+          "E": {
+            "x": 3368,
+            "y": 0,
+            "width": 126,
+            "height": 256
+          },
+          "F": {
+            "x": 3592,
+            "y": 0,
+            "width": 121,
+            "height": 256
+          },
+          "G": {
+            "x": 3783,
+            "y": 0,
+            "width": 182,
+            "height": 256
+          },
+          "H": {
+            "x": 4011,
+            "y": 0,
+            "width": 168,
+            "height": 256
+          },
+          "I": {
+            "x": 4301,
+            "y": 0,
+            "width": 32,
+            "height": 256
+          },
+          "J": {
+            "x": 4497,
+            "y": 0,
+            "width": 99,
+            "height": 256
+          },
+          "K": {
+            "x": 4692,
+            "y": 0,
+            "width": 157,
+            "height": 256
+          },
+          "L": {
+            "x": 4920,
+            "y": 0,
+            "width": 125,
+            "height": 256
+          },
+          "M": {
+            "x": 5100,
+            "y": 0,
+            "width": 207,
+            "height": 256
+          },
+          "N": {
+            "x": 5338,
+            "y": 0,
+            "width": 170,
+            "height": 256
+          },
+          "O": {
+            "x": 5548,
+            "y": 0,
+            "width": 196,
+            "height": 256
+          },
+          "P": {
+            "x": 5806,
+            "y": 0,
+            "width": 137,
+            "height": 256
+          },
+          "Q": {
+            "x": 5994,
+            "y": 0,
+            "width": 182,
+            "height": 256
+          },
+          "R": {
+            "x": 6242,
+            "y": 0,
+            "width": 144,
+            "height": 256
+          },
+          "S": {
+            "x": 6464,
+            "y": 0,
+            "width": 132,
+            "height": 256
+          },
+          "T": {
+            "x": 6668,
+            "y": 0,
+            "width": 165,
+            "height": 256
+          },
+          "U": {
+            "x": 6889,
+            "y": 0,
+            "width": 164,
+            "height": 256
+          },
+          "V": {
+            "x": 7106,
+            "y": 0,
+            "width": 183,
+            "height": 256
+          },
+          "W": {
+            "x": 7316,
+            "y": 0,
+            "width": 202,
+            "height": 256
+          },
+          "X": {
+            "x": 7552,
+            "y": 0,
+            "width": 171,
+            "height": 256
+          },
+          "Y": {
+            "x": 7775,
+            "y": 0,
+            "width": 173,
+            "height": 256
+          },
+          "Z": {
+            "x": 7999,
+            "y": 0,
+            "width": 166,
+            "height": 256
+          },
+          ",": {
+            "x": 82,
+            "y": 256,
+            "width": 52,
+            "height": 256
+          },
+          ".": {
+            "x": 311,
+            "y": 256,
+            "width": 39,
+            "height": 256
+          },
+          ":": {
+            "x": 536,
+            "y": 256,
+            "width": 40,
+            "height": 256
+          },
+          "!": {
+            "x": 755,
+            "y": 256,
+            "width": 39,
+            "height": 256
+          },
+          "?": {
+            "x": 946,
+            "y": 256,
+            "width": 100,
+            "height": 256
+          },
+          "%": {
+            "x": 1109,
+            "y": 256,
+            "width": 214,
+            "height": 256
+          },
+          "&": {
+            "x": 1349,
+            "y": 256,
+            "width": 181,
+            "height": 256
+          },
+          "#": {
+            "x": 1580,
+            "y": 256,
+            "width": 139,
+            "height": 256
+          },
+          "+": {
+            "x": 1795,
+            "y": 256,
+            "width": 169,
+            "height": 256
+          },
+          "a": {
+            "x": 2039,
+            "y": 256,
+            "width": 129,
+            "height": 256
+          },
+          "b": {
+            "x": 2252,
+            "y": 256,
+            "width": 154,
+            "height": 256
+          },
+          "c": {
+            "x": 2476,
+            "y": 256,
+            "width": 127,
+            "height": 256
+          },
+          "d": {
+            "x": 2687,
+            "y": 256,
+            "width": 153,
+            "height": 256
+          },
+          "e": {
+            "x": 2915,
+            "y": 256,
+            "width": 142,
+            "height": 256
+          },
+          "f": {
+            "x": 3158,
+            "y": 256,
+            "width": 106,
+            "height": 256
+          },
+          "g": {
+            "x": 3357,
+            "y": 256,
+            "width": 151,
+            "height": 256
+          },
+          "h": {
+            "x": 3584,
+            "y": 256,
+            "width": 139,
+            "height": 256
+          },
+          "i": {
+            "x": 3853,
+            "y": 256,
+            "width": 38,
+            "height": 256
+          },
+          "j": {
+            "x": 4045,
+            "y": 256,
+            "width": 68,
+            "height": 256
+          },
+          "k": {
+            "x": 4256,
+            "y": 256,
+            "width": 134,
+            "height": 256
+          },
+          "l": {
+            "x": 4520,
+            "y": 256,
+            "width": 32,
+            "height": 256
+          },
+          "m": {
+            "x": 4650,
+            "y": 256,
+            "width": 220,
+            "height": 256
+          },
+          "n": {
+            "x": 4911,
+            "y": 256,
+            "width": 139,
+            "height": 256
+          },
+          "o": {
+            "x": 5125,
+            "y": 256,
+            "width": 158,
+            "height": 256
+          },
+          "p": {
+            "x": 5349,
+            "y": 256,
+            "width": 155,
+            "height": 256
+          },
+          "q": {
+            "x": 5563,
+            "y": 256,
+            "width": 152,
+            "height": 256
+          },
+          "r": {
+            "x": 5834,
+            "y": 256,
+            "width": 84,
+            "height": 256
+          },
+          "s": {
+            "x": 6034,
+            "y": 256,
+            "width": 106,
+            "height": 256
+          },
+          "t": {
+            "x": 6254,
+            "y": 256,
+            "width": 97,
+            "height": 256
+          },
+          "u": {
+            "x": 6463,
+            "y": 256,
+            "width": 139,
+            "height": 256
+          },
+          "v": {
+            "x": 6678,
+            "y": 256,
+            "width": 152,
+            "height": 256
+          },
+          "w": {
+            "x": 6866,
+            "y": 256,
+            "width": 216,
+            "height": 256
+          },
+          "x": {
+            "x": 7122,
+            "y": 256,
+            "width": 146,
+            "height": 256
+          },
+          "y": {
+            "x": 7343,
+            "y": 256,
+            "width": 150,
+            "height": 256
+          },
+          "z": {
+            "x": 7572,
+            "y": 256,
+            "width": 132,
+            "height": 256
+          },
+          " ": {
+            "x": 8191,
+            "y": 511,
+            "width": 4,
+            "height": 256
+          }
+        },
+        "source": {
+          "source": "data/shared/alphabet/fontMP_alpha.dds",
+          "sha256": "57e3d43db0ef92b601373dc1d4e8cc462d0a6f1f265b13b22ef5bf78b74371bc"
+        },
+        "processing": "Original distance atlas, 4x coverage using alphabetShader smoothstep(.48,.52)"
+      }
+    },
+    "shiftLights": [
+      {
+        "x": 375.59070230250245,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT00",
+        "sourceStage": 1
+      },
+      {
+        "x": 458.0398094464457,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT01",
+        "sourceStage": 2
+      },
+      {
+        "x": 540.480906952256,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT02",
+        "sourceStage": 3
+      },
+      {
+        "x": 622.9259430320053,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT03",
+        "sourceStage": 4
+      },
+      {
+        "x": 705.3709871414667,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT04",
+        "sourceStage": 5
+      },
+      {
+        "x": 787.8119561718783,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT05",
+        "sourceStage": 6
+      },
+      {
+        "x": 870.2610673306779,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT06",
+        "sourceStage": 7
+      },
+      {
+        "x": 952.7022772524617,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT07",
+        "sourceStage": 8
+      },
+      {
+        "x": 1035.295810818744,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT07",
+        "sourceStage": 8
+      },
+      {
+        "x": 1117.7449179626874,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT06",
+        "sourceStage": 7
+      },
+      {
+        "x": 1200.1860114536412,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT05",
+        "sourceStage": 6
+      },
+      {
+        "x": 1282.631051548247,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT04",
+        "sourceStage": 5
+      },
+      {
+        "x": 1365.0760916428526,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT03",
+        "sourceStage": 4
+      },
+      {
+        "x": 1447.5171851338064,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT02",
+        "sourceStage": 3
+      },
+      {
+        "x": 1529.9622252284116,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT01",
+        "sourceStage": 2
+      },
+      {
+        "x": 1612.4073295607163,
+        "y": 8,
+        "width": 40,
+        "height": 40,
+        "bindingId": "POR_992_GT3R_RPM_LIGHT00",
+        "sourceStage": 1
+      }
+    ],
+    "shiftLightConfig": {
+      "count": 16,
+      "shape": "circle",
+      "order": "outside-in",
+      "stages": [
+        {
+          "fraction": 0.0,
+          "color": [
+            0.1,
+            1,
+            0.2,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT00"
+        },
+        {
+          "fraction": 0.14285714285714285,
+          "color": [
+            0.1,
+            1,
+            0.2,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT01"
+        },
+        {
+          "fraction": 0.2857142857142857,
+          "color": [
+            0.1,
+            1,
+            0.2,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT02"
+        },
+        {
+          "fraction": 0.42857142857142855,
+          "color": [
+            1,
+            0.65,
+            0.05,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT03"
+        },
+        {
+          "fraction": 0.5714285714285714,
+          "color": [
+            1,
+            0.65,
+            0.05,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT04"
+        },
+        {
+          "fraction": 0.7142857142857143,
+          "color": [
+            1,
+            0.65,
+            0.05,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT05"
+        },
+        {
+          "fraction": 0.8571428571428571,
+          "color": [
+            1,
+            0.1,
+            0.1,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT06"
+        },
+        {
+          "fraction": 1.0,
+          "color": [
+            1,
+            0.1,
+            0.1,
+            1
+          ],
+          "bindingId": "POR_992_GT3R_RPM_LIGHT07"
+        }
+      ],
+      "flashAtMax": true,
+      "source": "Original paired RPM lamp meshes and actor thresholds; outside-in visually confirmed"
+    },
+    "topPadding": 56
   }
 }

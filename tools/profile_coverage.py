@@ -25,7 +25,7 @@ def audit():
             assets.add(p.assetDirectory+meta.background.file)
             if meta.palette is not None:assets.add(p.assetDirectory+meta.palette.file)
             for _,f in p.fields.items():
-                font=mod.fonts[f.font] if f.font else meta.font
+                font=((p.fonts[f.font] if p.fonts is not None else None) or mod.fonts[f.font]) if f.font else meta.font
                 assert font is not None,(id,'missing font',f.font)
                 directory=p.fontDirectory if p.fontDirectory is not None else p.assetDirectory
                 assets.add(directory+font.file)

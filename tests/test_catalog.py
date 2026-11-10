@@ -62,7 +62,7 @@ for row in enabled:
     assert p.width>0 and p.height>0
     for _,field in p.fields.items():
         assert all(math.isfinite(field[k]) for k in ('x','y','height')) and field.height>0
-        font=mod.fonts[field.font] if field.font else (p.assets or mod.supraAssets).font
+        font=((p.fonts[field.font] if p.fonts is not None else None) or mod.fonts[field.font]) if field.font else (p.assets or mod.supraAssets).font
         assert font is not None and font.glyphs['-'] is not None
         directory=p.fontDirectory if p.fontDirectory is not None else p.assetDirectory
         assert (ROOT/(directory+font.file)).exists()

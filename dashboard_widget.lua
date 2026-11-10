@@ -91,7 +91,7 @@ function mod.refresh(dt)
     if not values.bestValid then
         values.delta=nil
         for _,field in ipairs(profile.fields) do
-            if field.param=='lapDelta' then values[field.id]=field.noBestLapValue end
+            if field.param=='lapDelta' or field.noBestLapValue~=nil then values[field.id]=field.noBestLapValue end
         end
         for _,gauge in ipairs(profile.gauges) do
             if gauge.param=='lapDelta' then values['gauge_'..gauge.id]=nil end
@@ -150,9 +150,36 @@ local function renderImage(overlay,x,y,w,h,color)
     overlay:setColor(unpack(color or white))
     overlay:render()
 end
+-- Reuse CustomHud/draw_hud.lua's native circular UI slices. Resources belong
+-- to this widget so release()/hot reload also cleans up these overlays.
+local function shiftLightCircle(lit)
+    local key=lit and '@shift-light-active' or '@shift-light-inactive'
+    if mod.resources[key] then return mod.resources[key] end
+    if not g_overlayManager or type(g_overlayManager.getSliceInfoById)~='function' then return nil end
+    local slice=g_overlayManager:getSliceInfoById(lit and 'ui_elements.shiftLight' or 'ui_elements.dotSmall')
+    if not slice then return nil end
+    local overlay=Overlay.new(slice.filename,0,0,0,0)
+    overlay:setSliceId(slice.sliceId)
+    mod.resources[key]=overlay
+    return overlay
+end
+local function drawShiftLight(x,y,width,height,color,shape,lit)
+    if shape=='circle' then
+        local overlay=shiftLightCircle(lit)
+        if overlay then renderImage(overlay,x,y,width,height,color);return end
+        -- Asset-free fallback also makes offline previews show circular lamps.
+        local rows=math.max(4,math.ceil(height*(g_screenHeight or 1080)))
+        for row=0,rows-1 do
+            local unit=2*(row+.5)/rows-1
+            local half=width*.5*math.sqrt(math.max(0,1-unit*unit))
+            drawFilledRect(x+width*.5-half,y+row*height/rows,half*2,height/rows,unpack(color))
+        end
+    else drawFilledRect(x,y,width,height,unpack(color)) end
+end
 function mod.drawText(profile,bounds,field,text,color)
     local meta=profile.assets or mod.supraAssets
-    local font=(field.font and mod.fonts and mod.fonts[field.font]) or meta.font
+    local font=(field.font and profile.fonts and profile.fonts[field.font])
+        or (field.font and mod.fonts and mod.fonts[field.font]) or meta.font
     if not font then return end
     local overlay=getOverlay(profile,font.file,profile.fontDirectory)
     local height=field.height*(field.heightScale or 1)
@@ -277,19 +304,33 @@ function mod.drawDashboard(bounds,profile,values)
     local rpm=values.gauge_rpm
     local start,finish=values.shiftStart or 5600,values.shiftEnd or 7350
     local lights=profile.shiftLights
-    local count=lights and #lights or 7
+    local config=profile.shiftLightConfig or {}
+    local count=config.count or (lights and #lights or 7)
+    local paired=config.order=='outside-in' or config.order=='inside-out'
+    local stages=paired and math.ceil(count/2) or count
     for i=1,count do
         local light=lights and lights[i]
-        local threshold=light and light.threshold or start+(light and light.fraction or (i-1)/6)*math.max(1,finish-start)
+        local stage=i
+        if config.order=='right-to-left' then stage=count+1-i
+        elseif paired then
+            stage=math.min(i,count+1-i)
+            if config.order=='inside-out' then stage=stages+1-stage end
+        end
+        local setting=(config.stages and config.stages[stage]) or light
+        local fraction=setting and setting.fraction
+        if fraction==nil then fraction=(stage-1)/math.max(1,stages-1) end
+        local threshold=setting and setting.threshold or start+fraction*math.max(1,finish-start)
         local lit=finite(rpm) and rpm>=threshold
-        local c=lit and (light and light.color or (i<3 and green or i<5 and {1,.65,.05,1} or red)) or {.08,.09,.1,1}
-        if lit and rpm>=(values.shiftMax or 8000) and math.floor((mod.clock or 0)*8)%2==1 then c={.08,.09,.1,1} end
+        local offColor=(light and light.offColor) or config.offColor or {.08,.09,.1,1}
+        local c=lit and (setting and setting.color or (stage<3 and green or stage<5 and {1,.65,.05,1} or red)) or offColor
+        if config.flashAtMax~=false and lit and rpm>=(values.shiftMax or 8000) and math.floor((mod.clock or 0)*8)%2==1 then c=offColor;lit=false end
         local x=light and light.x or profile.width/2-139+(i-1)*41
         local y=light and light.y or 13
         local width=light and light.width or 32
         local height=light and light.height or 15
-        drawFilledRect(bounds.left+x*sx,
-            bounds.bottom+bounds.height-(y+height)*sy,width*sx,height*sy,unpack(c))
+        drawShiftLight(bounds.left+x*sx,
+            bounds.bottom+bounds.height-(y+height)*sy,width*sx,height*sy,c,
+            (light and light.shape) or config.shape or 'rectangle',lit)
     end
 end
 function mod.bounds(widget)

@@ -76,6 +76,12 @@ def refine(vehicles=None):
         p['layoutStatus']=config.get('layoutStatus',p['layoutStatus'])
         if 'paletteControls' in config:p['paletteControls']=config['paletteControls']
         if 'paletteAtlas' in config:p['assets']['palette']=config['paletteAtlas']
+        if 'fonts' in config:p['fonts']=config['fonts']
+        if 'shiftLights' in config:p['shiftLights']=config['shiftLights']
+        if 'shiftLightConfig' in config:p['shiftLightConfig']=config['shiftLightConfig']
+        if 'topPadding' in config:
+            p['topPadding']=config['topPadding']
+            p['height']=p['assets']['crop']['height']+p['topPadding']
         if config.get('displayCrop'):
             p['assets']['crop']=config['displayCrop']
             p['width']=p['assets']['crop']['width'];p['height']=p['assets']['crop']['height']+p['topPadding']
